@@ -1,0 +1,15 @@
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\GeradorDesktop.exe.config
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\GeradorDesktop.exe
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\GeradorDesktop.pdb
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\Camada_Info.dll
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\MySql.Data.dll
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\Camada_Info.pdb
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\MySql.Data.xml
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.csprojAssemblyReference.cache
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.Form1.resources
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.Properties.Resources.resources
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.csproj.GenerateResource.cache
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.csproj.CoreCompileInputs.cache
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.csproj.CopyComplete
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.exe
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.pdb
