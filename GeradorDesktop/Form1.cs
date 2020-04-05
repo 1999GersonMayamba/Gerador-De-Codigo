@@ -100,17 +100,17 @@ namespace GeradorDesktop
                         //MessageBox.Show(retorno2);
                     }
 
-                    if (checkBox_API.Checked == true)
+                    if (checkBox_ScriptSql.Checked == true)
                     {
                         //GERAR SCRIPT SQL
                         string retorno3 = Arquivo.GerarScriptSql(ItemSelecionado.ToString(), folderBrowserDialog1.SelectedPath);
                         //MessageBox.Show(retorno3);
                     }
 
-                    if (checkBox_ScriptSql.Checked == true)
+                    if (checkBox_API.Checked == true)
                     {
                         //GERAR CONTROLLER API
-                        string retorno4 = Arquivo.GerarControllerAPI(ItemSelecionado.ToString(), textBox_NameSpace_API_Project.Text, folderBrowserDialog1.SelectedPath);
+                        string retorno4 = Arquivo.GerarControllerAPI(ItemSelecionado.ToString(), textBox_NameSpace_API_Project.Text, folderBrowserDialog1.SelectedPath, Lb_NameSpace.Text);
                         //MessageBox.Show(retorno4);
                     }
 

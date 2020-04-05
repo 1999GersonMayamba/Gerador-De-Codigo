@@ -169,6 +169,7 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("using System.Linq;");
                     stream.WriteLine("using System.Text;");
                     stream.WriteLine("using " + NameSpaceDoProjecto + ".INFO;");
+                    stream.WriteLine("using " + NameSpaceDoProjecto + ";");
                     stream.WriteLine("using MySql.Data.MySqlClient;");
                     stream.WriteLine("using System.Threading.Tasks;\n\n\n");
                     //Cabeçalho das biblotecas fim namespaces
@@ -554,7 +555,7 @@ namespace Camada_Info.GeradorInfo
 
         }
 
-        public string GerarControllerAPI(string NomeDaTabela, string NameSpaceDoProjecto, string DirectorioAondeSeraGeradoAInfo)
+        public string GerarControllerAPI(string NomeDaTabela, string NameSpaceDoProjecto, string DirectorioAondeSeraGeradoAInfo, string NameSpaceDAL_INFO)
         {
 
             try
@@ -601,11 +602,9 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("using System;");
                     stream.WriteLine("using System.Collections.Generic;");
                     stream.WriteLine("using System.Net;");
-                    stream.WriteLine("using System.Linq;");
                     stream.WriteLine("using System.Net.Http;");
-                    stream.WriteLine("using " + NameSpaceDoProjecto + ".INFO;");
-                    stream.WriteLine("using " + NameSpaceDoProjecto + ".DAL;");
-                    stream.WriteLine("using System.Net.Http;");
+                    stream.WriteLine("using " + NameSpaceDAL_INFO + ".INFO;");
+                    stream.WriteLine("using " + NameSpaceDAL_INFO + ".DAL;");
                     stream.WriteLine("using System.Web.Http;\n\n\n");
                     //Cabeçalho das biblotecas fim namespaces
 
@@ -621,9 +620,9 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t\ttry");
                     stream.WriteLine("\t\t\t\t{");
                     string NomeDaClasse = NomeDaTabela + "_INFO";
-                    stream.WriteLine("\t\t\t\t\t " + NomeDaTabela + "_INFO " + NomeDaClasse.ToLower() + " = " + NomeDaTabela + "_INFO();");
+                    stream.WriteLine("\t\t\t\t\t " + NomeDaTabela + "_INFO " + NomeDaClasse.ToLower() + " = new " + NomeDaTabela + "_INFO();");
                     stream.WriteLine("\t\t\t\t\t " + NomeDaClasse.ToLower() + ".Opcao = "+ "\"" + "Get_SP" + "\";");
-                    stream.WriteLine("\t\t\t\t\t List<" + NomeDaTabela + "_INFO>´" + NomeDaTabela.Substring(3) + "s"  + " = new " + NomeDaTabela + "_DAL().SelectAll(" + NomeDaClasse.ToLower() + ");");
+                    stream.WriteLine("\t\t\t\t\t List<" + NomeDaTabela + "_INFO> " + NomeDaTabela.Substring(3) + "s"  + " = new " + NomeDaTabela + "_DAL().SelectAll(" + NomeDaClasse.ToLower() + ");");
                     stream.WriteLine("\n\t\t\t\t if (" + NomeDaTabela.Substring(3) + "s" + " == null)");
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\treturn Request.CreateErrorResponse(HttpStatusCode.NotFound, new HttpError(" + "\"" + NomeDaTabela.Substring(3) +" Não Encontrado" + "\"" + "));");
@@ -647,8 +646,8 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t\ttry"); //Aqui começa o try
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\t " + NomeDaTabela.Substring(3) + ".Opcao = " + "\"" + "Insert" + "\";" );
-                    stream.WriteLine("\t\t\t\t\t " + NomeDaTabela.Substring(3) + ".Id = " + "Guid.NewGuid().ToString();");
-                    stream.WriteLine("\t\t\t\t\t erro = new " + NomeDaTabela + "DAL()" + ".Inserir" + NomeDaTabela.Substring(3) + "(" + NomeDaTabela.Substring(3).ToLower() + ", out erro);");
+                    stream.WriteLine("\t\t\t\t\t// " + NomeDaTabela.Substring(3) + ".Id = " + "Guid.NewGuid().ToString();");
+                    stream.WriteLine("\t\t\t\t\t erro = new " + NomeDaTabela + "_DAL()" + ".Insert" + "(" + NomeDaTabela.Substring(3).ToLower() + ");");
                     stream.WriteLine("\t\t\t\t\t return Request.CreateResponse(HttpStatusCode.OK, erro);");
                     stream.WriteLine("\t\t\t\t}"); //Aqui fecha o código do try
                     stream.WriteLine("\t\t\t\tcatch (Exception ex)");
@@ -665,7 +664,7 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t\ttry"); //Aqui começa o try
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\t " + NomeDaTabela.Substring(3) + ".Opcao = " + "\"" + "Update" + "\";");
-                    stream.WriteLine("\t\t\t\t\t var response = new" + NomeDaTabela + "DAL()" + "Update" + NomeDaTabela.Substring(3) + "(" + NomeDaTabela.Substring(3).ToLower() + ");");
+                    stream.WriteLine("\t\t\t\t\t var response = new " + NomeDaTabela + "_DAL()" + ".Update" +  "(" + NomeDaTabela.Substring(3).ToLower() + ");");
                     stream.WriteLine("\t\t\t\t\t return Request.CreateErrorResponse(HttpStatusCode.OK, response);");
                     stream.WriteLine("\t\t\t\t}"); //Aqui fecha o código do try
                     stream.WriteLine("\t\t\t\tcatch (Exception ex)");
@@ -682,8 +681,8 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\t" + NomeDaTabela + "_INFO " + NomeDaTabela.Substring(3) + " = new " + NomeDaTabela + "_INFO();");
                     stream.WriteLine("\t\t\t\t\t" + NomeDaTabela.Substring(3) + ".Opcao = " + "\"" + "Delete" + "\";");
-                    stream.WriteLine("\t\t\t\t\t" + NomeDaTabela.Substring(3) + ".id = id;");
-                    stream.WriteLine("\t\t\t\t\tvar response = new " + NomeDaTabela + "DAL().Apagar" + NomeDaTabela.Substring(3) + "(" + NomeDaTabela.Substring(3) + ");");
+                    stream.WriteLine("\t\t\t\t\t//" + NomeDaTabela.Substring(3) + ".id = id;");
+                    stream.WriteLine("\t\t\t\t\tvar response = new " + NomeDaTabela + "_DAL().Delete"  + "(" + NomeDaTabela.Substring(3) + ");");
                     stream.WriteLine("\t\t\t\t\treturn Request.CreateErrorResponse(HttpStatusCode.OK, response);");
                     stream.WriteLine("\t\t\t\t}"); //Aqui fecha o código do try
                     stream.WriteLine("\t\t\t\tcatch (Exception ex)");
