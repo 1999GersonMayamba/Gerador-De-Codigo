@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeradorDesktop", "GeradorDesktop\GeradorDesktop.csproj", "{E7A1DDCB-1836-4AF9-8C0C-2A63EF752F41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camada_Info", "..\Gerador_De_Codigo\Camada_Info\Camada_Info.csproj", "{F16B5EDD-2C20-4B92-8053-8C0ABB4E843B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camada_Info", "Gerador_De_Codigo\Camada_Info\Camada_Info.csproj", "{F16B5EDD-2C20-4B92-8053-8C0ABB4E843B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gerador_De_Codigo_Teste", "..\Gerador_De_Codigo\Gerador_De_Codigo\Gerador_De_Codigo_Teste.csproj", "{3DA9D3D5-C1A8-4093-A9C6-D2BD876FCC8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gerador_De_Codigo_Teste", "Gerador_De_Codigo\Gerador_De_Codigo\Gerador_De_Codigo_Teste.csproj", "{3DA9D3D5-C1A8-4093-A9C6-D2BD876FCC8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

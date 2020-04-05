@@ -1,0 +1,12 @@
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo.exe.config
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo.exe
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo.pdb
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\MySql.Data.dll
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\MySql.Data.xml
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo.csprojAssemblyReference.cache
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo.csproj.CoreCompileInputs.cache
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo.csproj.CopyComplete
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo.exe
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo.pdb
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Camada_Info.dll
+C:\Users\Gerson Mayamba\source\repos\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Camada_Info.pdb

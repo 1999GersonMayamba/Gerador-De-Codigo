@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gerador_De_Codigo", "Gerador_De_Codigo\Gerador_De_Codigo.csproj", "{3DA9D3D5-C1A8-4093-A9C6-D2BD876FCC8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camada_Info", "Camada_Info\Camada_Info.csproj", "{F16B5EDD-2C20-4B92-8053-8C0ABB4E843B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DA9D3D5-C1A8-4093-A9C6-D2BD876FCC8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA9D3D5-C1A8-4093-A9C6-D2BD876FCC8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA9D3D5-C1A8-4093-A9C6-D2BD876FCC8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA9D3D5-C1A8-4093-A9C6-D2BD876FCC8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16B5EDD-2C20-4B92-8053-8C0ABB4E843B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16B5EDD-2C20-4B92-8053-8C0ABB4E843B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16B5EDD-2C20-4B92-8053-8C0ABB4E843B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16B5EDD-2C20-4B92-8053-8C0ABB4E843B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3D194BF-2982-429C-8E51-D0E84D1E0FC2}
+	EndGlobalSection
+EndGlobal

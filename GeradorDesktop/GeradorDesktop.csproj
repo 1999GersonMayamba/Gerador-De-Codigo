@@ -80,7 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Gerador_De_Codigo\Camada_Info\Camada_Info.csproj">
+    <ProjectReference Include="..\Gerador_De_Codigo\Camada_Info\Camada_Info.csproj">
       <Project>{f16b5edd-2c20-4b92-8053-8c0abb4e843b}</Project>
       <Name>Camada_Info</Name>
     </ProjectReference>

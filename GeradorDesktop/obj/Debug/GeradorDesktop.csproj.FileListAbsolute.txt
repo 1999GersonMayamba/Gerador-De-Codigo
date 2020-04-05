@@ -13,3 +13,5 @@ C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\Ger
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.csproj.CopyComplete
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.exe
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\obj\Debug\GeradorDesktop.pdb
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\Google.Protobuf.dll
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\GeradorDesktop\bin\Debug\BouncyCastle.Crypto.dll
