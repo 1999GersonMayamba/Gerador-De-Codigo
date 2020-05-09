@@ -3,7 +3,7 @@ Uma ferramenta criada por min, para acelrar o desenvolcimento de projectos feito
 Principalmente para pessoas que usam o design patters 3 layers (3 camadas). Ele gera tudo isso de forma autómatica só ficas,
 com o trabalho de se preocupar com o front-end.
 
-![alt text](https://ibb.co/FHp0pFd)
+![alt text](https://i.ibb.co/5KZnZPJ/Capturar1.png)
 
 
 # Permite
