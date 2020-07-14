@@ -8,7 +8,7 @@ com o trabalho de se preocupar com o front-end.
 
 # Permite
 - Gerar automáticamente a DAL (data access layer).
-- Gerar aotomáticamente a INFO.
+- Gerar automáticamente a INFO.
 - Srcipts da BD para mysql.
 - Controllers da API em c# para Asp.Net.
 - Gerar automáticamente as classes que vão consumir os controllers.
