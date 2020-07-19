@@ -1,6 +1,6 @@
 ﻿namespace GeradorDesktop
 {
-    partial class Form1
+    partial class Gerador_Codigo_Mysql
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -49,15 +49,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_NameSpace_API_Project = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox_API = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox_DAL = new System.Windows.Forms.CheckBox();
-            this.checkBox_INFO = new System.Windows.Forms.CheckBox();
-            this.button_All = new System.Windows.Forms.Button();
-            this.checkBox_ScriptSql = new System.Windows.Forms.CheckBox();
             this.textBox_NameSpaceConsumirAPI = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.checkBox_API = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox_ConsumirAPI = new System.Windows.Forms.CheckBox();
+            this.checkBox_ScriptSql = new System.Windows.Forms.CheckBox();
+            this.checkBox_INFO = new System.Windows.Forms.CheckBox();
+            this.checkBox_DAL = new System.Windows.Forms.CheckBox();
+            this.button_All = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -264,6 +264,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Namespace Projectos";
             // 
+            // textBox_NameSpaceConsumirAPI
+            // 
+            this.textBox_NameSpaceConsumirAPI.Location = new System.Drawing.Point(123, 93);
+            this.textBox_NameSpaceConsumirAPI.Name = "textBox_NameSpaceConsumirAPI";
+            this.textBox_NameSpaceConsumirAPI.Size = new System.Drawing.Size(279, 20);
+            this.textBox_NameSpaceConsumirAPI.TabIndex = 19;
+            this.textBox_NameSpaceConsumirAPI.Text = "Mayamba";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Consumo/API C#";
+            // 
             // checkBox_API
             // 
             this.checkBox_API.AutoSize = true;
@@ -290,40 +307,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Gerar";
             // 
-            // checkBox_DAL
+            // checkBox_ConsumirAPI
             // 
-            this.checkBox_DAL.AutoSize = true;
-            this.checkBox_DAL.Checked = true;
-            this.checkBox_DAL.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_DAL.Location = new System.Drawing.Point(135, 27);
-            this.checkBox_DAL.Name = "checkBox_DAL";
-            this.checkBox_DAL.Size = new System.Drawing.Size(47, 17);
-            this.checkBox_DAL.TabIndex = 20;
-            this.checkBox_DAL.Text = "DAL";
-            this.checkBox_DAL.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_INFO
-            // 
-            this.checkBox_INFO.AutoSize = true;
-            this.checkBox_INFO.Checked = true;
-            this.checkBox_INFO.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_INFO.Location = new System.Drawing.Point(6, 27);
-            this.checkBox_INFO.Name = "checkBox_INFO";
-            this.checkBox_INFO.Size = new System.Drawing.Size(51, 17);
-            this.checkBox_INFO.TabIndex = 21;
-            this.checkBox_INFO.Text = "INFO";
-            this.checkBox_INFO.UseVisualStyleBackColor = true;
-            // 
-            // button_All
-            // 
-            this.button_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_All.Location = new System.Drawing.Point(432, 365);
-            this.button_All.Name = "button_All";
-            this.button_All.Size = new System.Drawing.Size(227, 32);
-            this.button_All.TabIndex = 21;
-            this.button_All.Text = "Gerar ";
-            this.button_All.UseVisualStyleBackColor = true;
-            this.button_All.Click += new System.EventHandler(this.button_All_Click);
+            this.checkBox_ConsumirAPI.AutoSize = true;
+            this.checkBox_ConsumirAPI.Checked = true;
+            this.checkBox_ConsumirAPI.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_ConsumirAPI.Location = new System.Drawing.Point(6, 129);
+            this.checkBox_ConsumirAPI.Name = "checkBox_ConsumirAPI";
+            this.checkBox_ConsumirAPI.Size = new System.Drawing.Size(109, 17);
+            this.checkBox_ConsumirAPI.TabIndex = 23;
+            this.checkBox_ConsumirAPI.Text = "Consumo/API C#";
+            this.checkBox_ConsumirAPI.UseVisualStyleBackColor = true;
             // 
             // checkBox_ScriptSql
             // 
@@ -337,34 +331,40 @@
             this.checkBox_ScriptSql.Text = "Script Sql";
             this.checkBox_ScriptSql.UseVisualStyleBackColor = true;
             // 
-            // textBox_NameSpaceConsumirAPI
+            // checkBox_INFO
             // 
-            this.textBox_NameSpaceConsumirAPI.Location = new System.Drawing.Point(123, 93);
-            this.textBox_NameSpaceConsumirAPI.Name = "textBox_NameSpaceConsumirAPI";
-            this.textBox_NameSpaceConsumirAPI.Size = new System.Drawing.Size(279, 20);
-            this.textBox_NameSpaceConsumirAPI.TabIndex = 19;
-            this.textBox_NameSpaceConsumirAPI.Text = "Mayamba";
+            this.checkBox_INFO.AutoSize = true;
+            this.checkBox_INFO.Checked = true;
+            this.checkBox_INFO.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_INFO.Location = new System.Drawing.Point(6, 27);
+            this.checkBox_INFO.Name = "checkBox_INFO";
+            this.checkBox_INFO.Size = new System.Drawing.Size(51, 17);
+            this.checkBox_INFO.TabIndex = 21;
+            this.checkBox_INFO.Text = "INFO";
+            this.checkBox_INFO.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // checkBox_DAL
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Consumo/API C#";
+            this.checkBox_DAL.AutoSize = true;
+            this.checkBox_DAL.Checked = true;
+            this.checkBox_DAL.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_DAL.Location = new System.Drawing.Point(135, 27);
+            this.checkBox_DAL.Name = "checkBox_DAL";
+            this.checkBox_DAL.Size = new System.Drawing.Size(47, 17);
+            this.checkBox_DAL.TabIndex = 20;
+            this.checkBox_DAL.Text = "DAL";
+            this.checkBox_DAL.UseVisualStyleBackColor = true;
             // 
-            // checkBox_ConsumirAPI
+            // button_All
             // 
-            this.checkBox_ConsumirAPI.AutoSize = true;
-            this.checkBox_ConsumirAPI.Checked = true;
-            this.checkBox_ConsumirAPI.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_ConsumirAPI.Location = new System.Drawing.Point(6, 129);
-            this.checkBox_ConsumirAPI.Name = "checkBox_ConsumirAPI";
-            this.checkBox_ConsumirAPI.Size = new System.Drawing.Size(109, 17);
-            this.checkBox_ConsumirAPI.TabIndex = 23;
-            this.checkBox_ConsumirAPI.Text = "Consumo/API C#";
-            this.checkBox_ConsumirAPI.UseVisualStyleBackColor = true;
+            this.button_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_All.Location = new System.Drawing.Point(432, 365);
+            this.button_All.Name = "button_All";
+            this.button_All.Size = new System.Drawing.Size(227, 32);
+            this.button_All.TabIndex = 21;
+            this.button_All.Text = "Gerar ";
+            this.button_All.UseVisualStyleBackColor = true;
+            this.button_All.Click += new System.EventHandler(this.button_All_Click);
             // 
             // Form1
             // 
@@ -380,7 +380,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gerador De Código";
+            this.Text = "Gerador De Código Mysql";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

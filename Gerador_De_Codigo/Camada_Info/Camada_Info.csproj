@@ -46,10 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeradorInfo\Arquivo.cs" />
+    <Compile Include="GeradorInfo\ArquivoSqlServer.cs" />
     <Compile Include="GeradorInfo\ConectionLocal.cs" />
     <Compile Include="GeradorInfo\conexao.cs" />
+    <Compile Include="GeradorInfo\ConexaoSqlServer.cs" />
     <Compile Include="GeradorInfo\Mapeamento.cs" />
     <Compile Include="GeradorInfo\Tb_Estrutura_Info.cs" />
+    <Compile Include="GeradorInfo\Tb_SchemaSqlServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

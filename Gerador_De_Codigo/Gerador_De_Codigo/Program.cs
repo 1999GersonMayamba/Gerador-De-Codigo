@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.IO;
 using Camada_Info.GeradorInfo;
+using Gerador_De_Codigo_Teste;
 
 namespace Gerador_De_Codigo
 {
@@ -13,17 +14,10 @@ namespace Gerador_De_Codigo
     {
         static void Main(string[] args)
         {
-           
-            //foreach (var x in lista)
-            //{
-            //    Console.WriteLine("Moeda: {0}", x.Nome);
-            //    Console.WriteLine("Sigla {0}", x.Sigla);
-            //    Console.WriteLine("Id_Moeda {0}", x.Id_Moeda);
-            //    Console.WriteLine("\n\n");
-            //}
-
             Console.ReadKey();
         }
 
     }
+
+
 }

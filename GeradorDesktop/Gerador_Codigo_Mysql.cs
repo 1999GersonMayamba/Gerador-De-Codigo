@@ -11,12 +11,12 @@ using Camada_Info.GeradorInfo;
 
 namespace GeradorDesktop
 {
-    public partial class Form1 : Form
+    public partial class Gerador_Codigo_Mysql : Form
     {
         Mapeamento mapeamento = new Mapeamento();
         Arquivo Arquivo = new Arquivo();
 
-        public Form1()
+        public Gerador_Codigo_Mysql()
         {
             InitializeComponent();
         }
