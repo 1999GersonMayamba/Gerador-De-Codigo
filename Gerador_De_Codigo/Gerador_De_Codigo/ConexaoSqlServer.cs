@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Camada_Info.GeradorInfo;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Gerador_De_Codigo_Teste
 
         public ConexaoSqlServer()
         {
-            Connection.ConnectionString = "server=localhost;User Id=Mayamba; database = TecnoGest; password = 123";
+            Connection.ConnectionString = ConectionLocal.URL;//"server=localhost;User Id=Mayamba; database = TecnoGest; password = 123";
         }
 
         public SqlConnection connectar()

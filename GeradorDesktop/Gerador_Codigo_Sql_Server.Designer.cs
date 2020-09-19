@@ -58,6 +58,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBox_Tabelas = new System.Windows.Forms.ListBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Lb_NameSpace_DAL = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,7 +68,7 @@
             // button_Gerar_Codigo
             // 
             this.button_Gerar_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Gerar_Codigo.Location = new System.Drawing.Point(435, 423);
+            this.button_Gerar_Codigo.Location = new System.Drawing.Point(435, 461);
             this.button_Gerar_Codigo.Name = "button_Gerar_Codigo";
             this.button_Gerar_Codigo.Size = new System.Drawing.Size(227, 32);
             this.button_Gerar_Codigo.TabIndex = 27;
@@ -83,7 +85,7 @@
             this.groupBox3.Controls.Add(this.checkBox_API);
             this.groupBox3.Location = new System.Drawing.Point(474, 232);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(188, 163);
+            this.groupBox3.Size = new System.Drawing.Size(188, 203);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Gerar";
@@ -93,7 +95,7 @@
             this.checkBox_ConsumirAPI.AutoSize = true;
             this.checkBox_ConsumirAPI.Checked = true;
             this.checkBox_ConsumirAPI.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_ConsumirAPI.Location = new System.Drawing.Point(6, 129);
+            this.checkBox_ConsumirAPI.Location = new System.Drawing.Point(6, 147);
             this.checkBox_ConsumirAPI.Name = "checkBox_ConsumirAPI";
             this.checkBox_ConsumirAPI.Size = new System.Drawing.Size(109, 17);
             this.checkBox_ConsumirAPI.TabIndex = 23;
@@ -105,7 +107,7 @@
             this.checkBox_ScriptSql.AutoSize = true;
             this.checkBox_ScriptSql.Checked = true;
             this.checkBox_ScriptSql.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_ScriptSql.Location = new System.Drawing.Point(6, 96);
+            this.checkBox_ScriptSql.Location = new System.Drawing.Point(6, 114);
             this.checkBox_ScriptSql.Name = "checkBox_ScriptSql";
             this.checkBox_ScriptSql.Size = new System.Drawing.Size(71, 17);
             this.checkBox_ScriptSql.TabIndex = 22;
@@ -117,7 +119,7 @@
             this.checkBox_INFO.AutoSize = true;
             this.checkBox_INFO.Checked = true;
             this.checkBox_INFO.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_INFO.Location = new System.Drawing.Point(6, 27);
+            this.checkBox_INFO.Location = new System.Drawing.Point(6, 45);
             this.checkBox_INFO.Name = "checkBox_INFO";
             this.checkBox_INFO.Size = new System.Drawing.Size(51, 17);
             this.checkBox_INFO.TabIndex = 21;
@@ -129,7 +131,7 @@
             this.checkBox_DAL.AutoSize = true;
             this.checkBox_DAL.Checked = true;
             this.checkBox_DAL.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_DAL.Location = new System.Drawing.Point(135, 27);
+            this.checkBox_DAL.Location = new System.Drawing.Point(135, 45);
             this.checkBox_DAL.Name = "checkBox_DAL";
             this.checkBox_DAL.Size = new System.Drawing.Size(47, 17);
             this.checkBox_DAL.TabIndex = 20;
@@ -141,7 +143,7 @@
             this.checkBox_API.AutoSize = true;
             this.checkBox_API.Checked = true;
             this.checkBox_API.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_API.Location = new System.Drawing.Point(6, 62);
+            this.checkBox_API.Location = new System.Drawing.Point(6, 80);
             this.checkBox_API.Name = "checkBox_API";
             this.checkBox_API.Size = new System.Drawing.Size(43, 17);
             this.checkBox_API.TabIndex = 19;
@@ -150,6 +152,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Lb_NameSpace_DAL);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.textBox_NameSpaceConsumirAPI);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.textBox_NameSpace_API_Project);
@@ -159,14 +163,14 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(50, 232);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(408, 163);
+            this.groupBox2.Size = new System.Drawing.Size(408, 203);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Namespace Projectos";
             // 
             // textBox_NameSpaceConsumirAPI
             // 
-            this.textBox_NameSpaceConsumirAPI.Location = new System.Drawing.Point(123, 93);
+            this.textBox_NameSpaceConsumirAPI.Location = new System.Drawing.Point(123, 132);
             this.textBox_NameSpaceConsumirAPI.Name = "textBox_NameSpaceConsumirAPI";
             this.textBox_NameSpaceConsumirAPI.Size = new System.Drawing.Size(279, 20);
             this.textBox_NameSpaceConsumirAPI.TabIndex = 19;
@@ -175,7 +179,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 96);
+            this.label9.Location = new System.Drawing.Point(14, 135);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 13);
             this.label9.TabIndex = 18;
@@ -183,7 +187,7 @@
             // 
             // textBox_NameSpace_API_Project
             // 
-            this.textBox_NameSpace_API_Project.Location = new System.Drawing.Point(123, 62);
+            this.textBox_NameSpace_API_Project.Location = new System.Drawing.Point(123, 101);
             this.textBox_NameSpace_API_Project.Name = "textBox_NameSpace_API_Project";
             this.textBox_NameSpace_API_Project.Size = new System.Drawing.Size(279, 20);
             this.textBox_NameSpace_API_Project.TabIndex = 17;
@@ -191,7 +195,7 @@
             // 
             // btn_Diretorio
             // 
-            this.btn_Diretorio.Location = new System.Drawing.Point(236, 121);
+            this.btn_Diretorio.Location = new System.Drawing.Point(236, 160);
             this.btn_Diretorio.Name = "btn_Diretorio";
             this.btn_Diretorio.Size = new System.Drawing.Size(166, 30);
             this.btn_Diretorio.TabIndex = 13;
@@ -202,7 +206,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 59);
+            this.label8.Location = new System.Drawing.Point(14, 98);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 16;
@@ -221,9 +225,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(14, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "DAL/INFO";
+            this.label7.Text = "INFO";
             // 
             // groupBox1
             // 
@@ -358,12 +362,29 @@
             this.listBox_Tabelas.ItemHeight = 15;
             this.listBox_Tabelas.Location = new System.Drawing.Point(697, 85);
             this.listBox_Tabelas.Name = "listBox_Tabelas";
-            this.listBox_Tabelas.Size = new System.Drawing.Size(258, 319);
+            this.listBox_Tabelas.Size = new System.Drawing.Size(258, 349);
             this.listBox_Tabelas.TabIndex = 22;
             // 
             // folderBrowserDialog1
             // 
             this.folderBrowserDialog1.SelectedPath = "C:\\Users\\Gerson Mayamba\\Pictures\\Teste #Gerador De Codigo";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(28, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "DAL";
+            // 
+            // Lb_NameSpace_DAL
+            // 
+            this.Lb_NameSpace_DAL.Location = new System.Drawing.Point(123, 66);
+            this.Lb_NameSpace_DAL.Name = "Lb_NameSpace_DAL";
+            this.Lb_NameSpace_DAL.Size = new System.Drawing.Size(279, 20);
+            this.Lb_NameSpace_DAL.TabIndex = 21;
+            this.Lb_NameSpace_DAL.Text = "Mayamba";
             // 
             // Gerador_Codigo_Sql_Server
             // 
@@ -423,5 +444,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox_Tabelas;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.TextBox Lb_NameSpace_DAL;
+        private System.Windows.Forms.Label label10;
     }
 }

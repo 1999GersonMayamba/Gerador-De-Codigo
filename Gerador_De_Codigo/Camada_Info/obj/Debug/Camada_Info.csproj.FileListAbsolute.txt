@@ -17,3 +17,4 @@ C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Camada_Inf
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Camada_Info\obj\Debug\Camada_Info.csproj.CopyComplete
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Camada_Info\obj\Debug\Camada_Info.dll
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Camada_Info\obj\Debug\Camada_Info.pdb
+C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Camada_Info\obj\Debug\Camada_Info.csprojAssemblyReference.cache

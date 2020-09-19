@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Camada_Info.GeradorInfo;
 using MySql.Data.MySqlClient;
 
 namespace Gerador_De_Codigo
@@ -13,7 +14,7 @@ namespace Gerador_De_Codigo
 
         public conexao()
         {
-            Connection.ConnectionString = "server=localhost;port=3306;User Id=root; database = DaTerraKambio; password = Luseymayamba123#";
+            Connection.ConnectionString = ConectionLocal.URL;//"server=localhost;port=3306;User Id=root; database = DaTerraKambio; password = Luseymayamba123#";
         }
 
         public MySqlConnection connectar()

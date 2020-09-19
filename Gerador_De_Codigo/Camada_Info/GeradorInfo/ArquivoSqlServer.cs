@@ -255,7 +255,7 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("using System.Linq;");
                     stream.WriteLine("using System.Text;");
                     stream.WriteLine("using System.Threading.Tasks;\n\n\n");
-                    stream.WriteLine("namespace " + NameSpaceDoProjecto + ".INFO");
+                    stream.WriteLine("namespace " + NameSpaceDoProjecto + ".INFO"); //+ ".INFO"
                     stream.WriteLine("{");
                     stream.WriteLine("\t\tpublic class " + NomeDaTabela);
                     stream.WriteLine("\t\t{");
@@ -323,7 +323,7 @@ namespace Camada_Info.GeradorInfo
         /// <param name="NameSpaceDoProjecto">Namespace do projecto</param>
         /// <param name="DirectorioAondeSeraGeradoAInfo">Caminho aonde será gerado o arquivo (Ex: C://Documents/Tb_Curso.cs)</param>
         /// <returns></returns>
-        public string GerarDALDaTabelaSqlServer(string NomeDaTabela, string NameSpaceDoProjecto, string DirectorioAondeSeraGeradoAInfo)
+        public string GerarDALDaTabelaSqlServer(string NomeDaTabela, string NameSpaceDoProjecto, string NameSpaceINFO, string DirectorioAondeSeraGeradoAInfo)
         {
             try
             {
@@ -372,7 +372,7 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("using System.Data;");
                     stream.WriteLine("using System.Linq;");
                     stream.WriteLine("using System.Text;");
-                    stream.WriteLine("using " + NameSpaceDoProjecto + ".INFO;");
+                    stream.WriteLine("using " + NameSpaceINFO + ".INFO;");// + ".INFO;"
                     stream.WriteLine("using " + NameSpaceDoProjecto + ";");
                     stream.WriteLine("using System.Data.SqlClient;");
                     stream.WriteLine("using System.Threading;");

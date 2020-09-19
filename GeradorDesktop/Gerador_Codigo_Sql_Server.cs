@@ -70,7 +70,7 @@ namespace GeradorDesktop
                     if (checkBox_DAL.Checked == true)
                     {
                         //GERAR DAL
-                        string retorno2 = ArquivoSqlServer.GerarDALDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                        string retorno2 = ArquivoSqlServer.GerarDALDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace_DAL.Text, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
                         //MessageBox.Show(retorno2);
                     }
 
