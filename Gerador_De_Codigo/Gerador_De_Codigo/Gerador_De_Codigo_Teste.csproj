@@ -51,6 +51,8 @@
     <Compile Include="ConexaoSqlServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tb_Email.cs" />
+    <Compile Include="Tb_Email_DAL.cs" />
     <Compile Include="TesteSchema.cs" />
   </ItemGroup>
   <ItemGroup>

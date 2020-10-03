@@ -36,6 +36,8 @@
             this.checkBox_DAL = new System.Windows.Forms.CheckBox();
             this.checkBox_API = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Lb_NameSpace_DAL = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox_NameSpaceConsumirAPI = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox_NameSpace_API_Project = new System.Windows.Forms.TextBox();
@@ -58,8 +60,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBox_Tabelas = new System.Windows.Forms.ListBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Lb_NameSpace_DAL = new System.Windows.Forms.TextBox();
+            this.btn_Gerar_Tudo = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,11 +69,11 @@
             // button_Gerar_Codigo
             // 
             this.button_Gerar_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Gerar_Codigo.Location = new System.Drawing.Point(435, 461);
+            this.button_Gerar_Codigo.Location = new System.Drawing.Point(157, 451);
             this.button_Gerar_Codigo.Name = "button_Gerar_Codigo";
             this.button_Gerar_Codigo.Size = new System.Drawing.Size(227, 32);
             this.button_Gerar_Codigo.TabIndex = 27;
-            this.button_Gerar_Codigo.Text = "Gerar ";
+            this.button_Gerar_Codigo.Text = "Gerar  Selecionado";
             this.button_Gerar_Codigo.UseVisualStyleBackColor = true;
             this.button_Gerar_Codigo.Click += new System.EventHandler(this.button_Gerar_Codigo_Click);
             // 
@@ -167,6 +168,23 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Namespace Projectos";
+            // 
+            // Lb_NameSpace_DAL
+            // 
+            this.Lb_NameSpace_DAL.Location = new System.Drawing.Point(123, 66);
+            this.Lb_NameSpace_DAL.Name = "Lb_NameSpace_DAL";
+            this.Lb_NameSpace_DAL.Size = new System.Drawing.Size(279, 20);
+            this.Lb_NameSpace_DAL.TabIndex = 21;
+            this.Lb_NameSpace_DAL.Text = "Mayamba";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(28, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "DAL";
             // 
             // textBox_NameSpaceConsumirAPI
             // 
@@ -369,28 +387,23 @@
             // 
             this.folderBrowserDialog1.SelectedPath = "C:\\Users\\Gerson Mayamba\\Pictures\\Teste #Gerador De Codigo";
             // 
-            // label10
+            // btn_Gerar_Tudo
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(28, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "DAL";
-            // 
-            // Lb_NameSpace_DAL
-            // 
-            this.Lb_NameSpace_DAL.Location = new System.Drawing.Point(123, 66);
-            this.Lb_NameSpace_DAL.Name = "Lb_NameSpace_DAL";
-            this.Lb_NameSpace_DAL.Size = new System.Drawing.Size(279, 20);
-            this.Lb_NameSpace_DAL.TabIndex = 21;
-            this.Lb_NameSpace_DAL.Text = "Mayamba";
+            this.btn_Gerar_Tudo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Gerar_Tudo.Location = new System.Drawing.Point(435, 451);
+            this.btn_Gerar_Tudo.Name = "btn_Gerar_Tudo";
+            this.btn_Gerar_Tudo.Size = new System.Drawing.Size(227, 32);
+            this.btn_Gerar_Tudo.TabIndex = 28;
+            this.btn_Gerar_Tudo.Text = "Gerar Tudo";
+            this.btn_Gerar_Tudo.UseVisualStyleBackColor = true;
+            this.btn_Gerar_Tudo.Click += new System.EventHandler(this.btn_Gerar_Tudo_Click);
             // 
             // Gerador_Codigo_Sql_Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 521);
+            this.Controls.Add(this.btn_Gerar_Tudo);
             this.Controls.Add(this.button_Gerar_Codigo);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -446,5 +459,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.TextBox Lb_NameSpace_DAL;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btn_Gerar_Tudo;
     }
 }

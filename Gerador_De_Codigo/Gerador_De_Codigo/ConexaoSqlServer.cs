@@ -14,11 +14,13 @@ namespace Gerador_De_Codigo_Teste
 
         public ConexaoSqlServer()
         {
-            Connection.ConnectionString = ConectionLocal.URL;//"server=localhost;User Id=Mayamba; database = TecnoGest; password = 123";
+           // Connection.ConnectionString = ConectionLocal.URL;//"server=localhost;User Id=Mayamba; database = TecnoGest; password = 123";
         }
 
-        public SqlConnection connectar()
+        public SqlConnection connectar(string  _ConnectionString)
         {
+            Connection.ConnectionString = _ConnectionString;
+
             if (Connection.State == System.Data.ConnectionState.Closed)
             {
                 Connection.Open();
@@ -27,8 +29,11 @@ namespace Gerador_De_Codigo_Teste
             return Connection;
         }
 
-        public SqlConnection desconectar()
+        public SqlConnection desconectar(string _ConnectionString)
         {
+
+            Connection.ConnectionString = _ConnectionString;
+
             if (Connection.State == System.Data.ConnectionState.Open)
             {
                 Connection.Close();

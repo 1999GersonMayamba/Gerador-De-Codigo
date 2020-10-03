@@ -47,62 +47,65 @@ namespace GeradorDesktop
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button_Gerar_Codigo_Click(object sender, EventArgs e)
+        private async void button_Gerar_Codigo_Click(object sender, EventArgs e)
         {
-            var ItemSelecionado = listBox_Tabelas.SelectedItem as Tb_SchemaSqlServer;
+            //Executar a instrução numa outra Theared
 
-            try
-            {
+                var ItemSelecionado = listBox_Tabelas.SelectedItem as Tb_SchemaSqlServer;
 
-                if (checkBox_INFO.Checked == false && checkBox_DAL.Checked == false && checkBox_API.Checked == false && checkBox_ScriptSql.Checked == false)
+                try
                 {
-                    MessageBox.Show("Tem de habilitar por apenas um dos itens que deseja gerar!");
+
+                    if (checkBox_INFO.Checked == false && checkBox_DAL.Checked == false && checkBox_API.Checked == false && checkBox_ScriptSql.Checked == false)
+                    {
+                        MessageBox.Show("Tem de habilitar por apenas um dos itens que deseja gerar!");
+                    }
+                    else
+                    {
+                        if (checkBox_INFO.Checked == true)
+                        {
+                            //GERAR INFO
+                            string retorno = ArquivoSqlServer.GerarInfoDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno);
+                        }
+
+                        if (checkBox_DAL.Checked == true)
+                        {
+                            //GERAR DAL
+                            string retorno2 = ArquivoSqlServer.GerarDALDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace_DAL.Text, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno2);
+                        }
+
+                        if (checkBox_ScriptSql.Checked == true)
+                        {
+                            //GERAR SCRIPT SQL
+                            string retorno3 = ArquivoSqlServer.GerarScriptSqlServer(ItemSelecionado, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno3);
+                        }
+
+                        if (checkBox_API.Checked == true)
+                        {
+                            //GERAR CONTROLLER API
+                            string retorno4 = ArquivoSqlServer.GerarControllerAPIDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, textBox_NameSpace_API_Project.Text, folderBrowserDialog1.SelectedPath, Lb_NameSpace.Text);
+                            //MessageBox.Show(retorno4);
+                        }
+
+                        if (checkBox_ConsumirAPI.Checked == true)
+                        {
+                            //GERAR Classe Consumo Da API No C# 
+                            string retorno5 = ArquivoSqlServer.GerarClasseConsumirAPI_CsharpAPIDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, textBox_NameSpaceConsumirAPI.Text, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno5);
+                        }
+
+                        MessageBox.Show("Todos Item Foram Gerados Com Sucesso INFO, DAL, API, SCRIP SQL e Classe De Consumo da API no C#");
+                    }
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    if (checkBox_INFO.Checked == true)
-                    {
-                        //GERAR INFO
-                        string retorno = ArquivoSqlServer.GerarInfoDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
-                        //MessageBox.Show(retorno);
-                    }
-
-                    if (checkBox_DAL.Checked == true)
-                    {
-                        //GERAR DAL
-                        string retorno2 = ArquivoSqlServer.GerarDALDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace_DAL.Text, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
-                        //MessageBox.Show(retorno2);
-                    }
-
-                    if (checkBox_ScriptSql.Checked == true)
-                    {
-                        //GERAR SCRIPT SQL
-                        string retorno3 = ArquivoSqlServer.GerarScriptSqlServer(ItemSelecionado, folderBrowserDialog1.SelectedPath);
-                        //MessageBox.Show(retorno3);
-                    }
-
-                    if (checkBox_API.Checked == true)
-                    {
-                        //GERAR CONTROLLER API
-                        //string retorno4 = Arquivo.GerarControllerAPI(ItemSelecionado.ToString(), textBox_NameSpace_API_Project.Text, folderBrowserDialog1.SelectedPath, Lb_NameSpace.Text);
-                        //MessageBox.Show(retorno4);
-                    }
-
-                    if (checkBox_ConsumirAPI.Checked == true)
-                    {
-                        //GERAR Classe Consumo Da API No C# 
-                       // string retorno5 = Arquivo.GerarClasseConsumirAPI_Csharp(ItemSelecionado.ToString(), textBox_NameSpaceConsumirAPI.Text, folderBrowserDialog1.SelectedPath);
-                        //MessageBox.Show(retorno5);
-                    }
-
-                    MessageBox.Show("Todos Item Foram Gerados Com Sucesso INFO, DAL, API, SCRIP SQL e Classe De Consumo da API no C#");
+                    MessageBox.Show(ex.Message);
                 }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         /// <summary>
@@ -114,6 +117,78 @@ namespace GeradorDesktop
         private void btn_Diretorio_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
+        }
+
+        /// <summary>
+        /// Evento invocado quando se clicar no botão gerar para tudo, para gerar código de todas as tabelas.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_Gerar_Tudo_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+
+                foreach(var x in listBox_Tabelas.Items)
+                {
+                      var ItemSelecionado = x as Tb_SchemaSqlServer; 
+
+                    if (checkBox_INFO.Checked == false && checkBox_DAL.Checked == false && checkBox_API.Checked == false && checkBox_ScriptSql.Checked == false)
+                    {
+                        MessageBox.Show("Tem de habilitar por apenas um dos itens que deseja gerar!");
+                        return;
+                    }
+                    else
+                    {
+                        if (checkBox_INFO.Checked == true)
+                        {
+                            //GERAR INFO
+                            string retorno = ArquivoSqlServer.GerarInfoDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno);
+                        }
+
+                        if (checkBox_DAL.Checked == true)
+                        {
+                            //GERAR DAL
+                            string retorno2 = ArquivoSqlServer.GerarDALDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, Lb_NameSpace_DAL.Text, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno2);
+                        }
+
+                        if (checkBox_ScriptSql.Checked == true)
+                        {
+                            //GERAR SCRIPT SQL
+                            string retorno3 = ArquivoSqlServer.GerarScriptSqlServer(ItemSelecionado, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno3);
+                        }
+
+                        if (checkBox_API.Checked == true)
+                        {
+                            //GERAR CONTROLLER API
+                            string retorno4 = ArquivoSqlServer.GerarControllerAPIDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, textBox_NameSpace_API_Project.Text, folderBrowserDialog1.SelectedPath, Lb_NameSpace.Text);
+                            //MessageBox.Show(retorno4);
+                        }
+
+                        if (checkBox_ConsumirAPI.Checked == true)
+                        {
+                            //GERAR Classe Consumo Da API No C# 
+                            string retorno5 = ArquivoSqlServer.GerarClasseConsumirAPI_CsharpAPIDaTabelaSqlServer(ItemSelecionado.TABLE_NAME, textBox_NameSpaceConsumirAPI.Text, folderBrowserDialog1.SelectedPath);
+                            //MessageBox.Show(retorno5);
+                        }
+
+                       // MessageBox.Show("Todos Item Foram Gerados Com Sucesso INFO, DAL, API, SCRIP SQL e Classe De Consumo da API no C#");
+                    }
+                }
+
+
+                MessageBox.Show("Todos Item Foram Gerados Com Sucesso INFO, DAL, API, SCRIP SQL e Classe De Consumo da API no C#");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
