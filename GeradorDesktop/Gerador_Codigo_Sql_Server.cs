@@ -47,7 +47,7 @@ namespace GeradorDesktop
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void button_Gerar_Codigo_Click(object sender, EventArgs e)
+        private void button_Gerar_Codigo_Click(object sender, EventArgs e)
         {
             //Executar a instrução numa outra Theared
 
