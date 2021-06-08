@@ -134,7 +134,7 @@ namespace GeradorDesktop
                 {
                       var ItemSelecionado = x as Tb_SchemaSqlServer; 
 
-                    if (checkBox_INFO.Checked == false && checkBox_DAL.Checked == false && checkBox_API.Checked == false && checkBox_ScriptSql.Checked == false)
+                    if (checkBox_INFO.Checked == false && checkBox_DAL.Checked == false && checkBox_API.Checked == false && checkBox_ScriptSql.Checked == false && checkBox_ConsumirAPI.Checked == false)
                     {
                         MessageBox.Show("Tem de habilitar por apenas um dos itens que deseja gerar!");
                         return;

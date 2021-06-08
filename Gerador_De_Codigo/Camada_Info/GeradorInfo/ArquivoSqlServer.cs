@@ -455,9 +455,14 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t\t\t\tcommand.CommandType = System.Data.CommandType.StoredProcedure;");
                     foreach (var x in estrutura_Infos)
                     {
-                        stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        if(x.Nome != "Data_Registo")
+                        {
+                            stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        }
+                        
                     }
                     //command.Parameters.Add(new SqlParameter("@Retorno", null));
+                    stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Data_Registo" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Data_Registo" + "));");
                     stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Retorno" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Retorno" + "));");
                     stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Retorno\", SqlDbType.VarChar, 800)).Direction = ParameterDirection.Output;");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Opcao" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Opcao" + "));");
@@ -571,8 +576,12 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t\t\t\tcommand.CommandType = System.Data.CommandType.StoredProcedure;");
                     foreach (var x in estrutura_Infos)
                     {
-                        stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        if (x.Nome != "Data_Registo")
+                        {
+                            stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        }
                     }
+                    stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Data_Registo" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Data_Registo" + "));");
                     stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Retorno" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Retorno" + "));");
                     stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Retorno\", SqlDbType.VarChar, 800)).Direction = ParameterDirection.Output;");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Opcao" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Opcao" + "));");
@@ -687,8 +696,12 @@ namespace Camada_Info.GeradorInfo
                     //Add parametros Sql
                     foreach (var x in estrutura_Infos)
                     {
-                        stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        if (x.Nome != "Data_Registo")
+                        {
+                            stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        }
                     }
+                    stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Data_Registo" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Data_Registo" + "));");
                     stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Retorno" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Retorno" + "));");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Retorno\", SqlDbType.VarChar, 800)).Direction = ParameterDirection.Output;");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Opcao" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Opcao" + "));");
@@ -771,8 +784,12 @@ namespace Camada_Info.GeradorInfo
                     //Add parametros Sql
                     foreach (var x in estrutura_Infos)
                     {
-                        stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        if (x.Nome != "Data_Registo")
+                        {
+                            stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        }
                     }
+                    stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Data_Registo" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Data_Registo" + "));");
                     stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Retorno" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Retorno" + "));");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Retorno\", SqlDbType.VarChar, 800)).Direction = ParameterDirection.Output;");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Opcao" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Opcao" + "));");
@@ -852,8 +869,12 @@ namespace Camada_Info.GeradorInfo
                     //Add parametros Sql
                     foreach (var x in estrutura_Infos)
                     {
-                        stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        if (x.Nome != "Data_Registo")
+                        {
+                            stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@" + x.Nome + "\"," + NomeDaTabela.Remove(0, 3) + "." + x.Nome + "));");
+                        }
                     }
+                    stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Data_Registo" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Data_Registo" + "));");
                     stream.WriteLine("\t\t\t\t\t\t//command.Parameters.Add(new SqlParameter(\"@Retorno" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Retorno" + "));");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Retorno\", SqlDbType.VarChar, 800)).Direction = ParameterDirection.Output;");
                     stream.WriteLine("\t\t\t\t\t\tcommand.Parameters.Add(new SqlParameter(\"@Opcao" + "\"," + NomeDaTabela.Remove(0, 3) + "." + "Opcao" + "));");
@@ -1003,6 +1024,8 @@ namespace Camada_Info.GeradorInfo
 
                     stream.WriteLine("namespace " + NameSpaceDoProjecto + ".Controllers"); // Escreve o namespace do projecto no arquivo
                     stream.WriteLine("{\n\n");// adiciona a primeira chaveta após o namespcae
+                    stream.WriteLine("\t\t[ApiController]"); // Adiciona o nome da classe e os seus atributos
+                    stream.WriteLine("\t\t[Route(\"api/[controller]\")]"); // Adiciona o nome da classe e os seus atributos
                     stream.WriteLine("\t\t//[EnableCors(\"CORSPolicy\")]"); // Adiciona o nome da classe e os seus atributos
                     stream.WriteLine("\t\t//[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]"); // Adiciona o nome da classe e os seus atributos
                     stream.WriteLine("\t\t//[Route(\"api/[controller]\")]"); // Adiciona o nome da classe e os seus atributos
@@ -1012,6 +1035,8 @@ namespace Camada_Info.GeradorInfo
 
                     #region "Action get para trazer todos os registos";
 
+                    // Conexao Conexao = new Conexao();
+                    stream.WriteLine("\t\t\tConexao Conexao = new Conexao();");
                     stream.WriteLine("\t\t\t //GET: api/" + NomeDaTabela.Substring(3));
                     //METODO GET DA CLASS COMEÇA AQUI
                     stream.WriteLine("\t\t\t[HttpGet]");
@@ -1019,10 +1044,11 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t{");
                     stream.WriteLine("\t\t\t\ttry");
                     stream.WriteLine("\t\t\t\t{");
-                    string NomeDaClasse = NomeDaTabela + "_INFO";
-                    stream.WriteLine("\t\t\t\t\t " + NomeDaTabela + "_INFO " + NomeDaClasse.ToLower() + " = new " + NomeDaTabela + "_INFO();");
+                    string NomeDaClasse = NomeDaTabela; //+ "_INFO";
+                    stream.WriteLine("\t\t\t\t\t string ConnectionString = Conexao.GetConnectionStringSql();");
+                    stream.WriteLine("\t\t\t\t\t " + NomeDaTabela  + " " + NomeDaClasse.ToLower() + " = new " + NomeDaTabela + "();");
                     stream.WriteLine("\t\t\t\t\t " + NomeDaClasse.ToLower() + ".Opcao = " + "\"" + "Select" + "\";");
-                    stream.WriteLine("\t\t\t\t\t List<" + NomeDaTabela + "_INFO> " + NomeDaTabela.Substring(3) + "s" + " = new " + NomeDaTabela + "_DAL().SelectAll(" + NomeDaClasse.ToLower() + ");");
+                    stream.WriteLine("\t\t\t\t\t List<" + NomeDaTabela + "> " + NomeDaTabela.Substring(3) + "s" + " = new " + NomeDaTabela + "_DAL().SelectAll(" + NomeDaClasse.ToLower() + ", ConnectionString);");
                     stream.WriteLine("\n\t\t\t\t if (" + NomeDaTabela.Substring(3) + "s" + " == null)");
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\treturn NotFound(\"Não existe registo na tabela para a requisição feita\");");
@@ -1046,14 +1072,15 @@ namespace Camada_Info.GeradorInfo
                     //METODO POST DO CONTROLLER COMEÇA AQUI 
                     stream.WriteLine("\n\n\t\t\t // POST: api/" + NomeDaTabela.Substring(3));
                     stream.WriteLine("\t\t\t[HttpPost]");
-                    stream.WriteLine("\t\t\t public IActionResult Post([FromBody]" + NomeDaTabela + "_INFO " + NomeDaTabela.Substring(3).ToLower() + ")");
+                    stream.WriteLine("\t\t\t public IActionResult Post([FromBody]" + NomeDaTabela + " " + NomeDaTabela.Substring(3).ToLower() + ")");
                     stream.WriteLine("\t\t\t{");//Aqui começa co código da função POST
                     stream.WriteLine("\t\t\t\tstring erro = null;");
                     stream.WriteLine("\t\t\t\ttry"); //Aqui começa o try
                     stream.WriteLine("\t\t\t\t{");
+                    stream.WriteLine("\t\t\t\t\t string ConnectionString = Conexao.GetConnectionStringSql();");
                     stream.WriteLine("\t\t\t\t\t " + NomeDaTabela.Substring(3).ToLower() + ".Opcao = " + "\"" + "Insert" + "\";");
                     stream.WriteLine("\t\t\t\t\t// " + NomeDaTabela.Substring(3) + ".Id = " + "Guid.NewGuid().ToString();");
-                    stream.WriteLine("\t\t\t\t\t erro = new " + NomeDaTabela + "_DAL()" + ".Insert" + "(" + NomeDaTabela.Substring(3).ToLower() + ");");
+                    stream.WriteLine("\t\t\t\t\t erro = new " + NomeDaTabela + "_DAL()" + ".Insert" + "(" + NomeDaTabela.Substring(3).ToLower() + ", ConnectionString);");
                     stream.WriteLine("\t\t\t\t\t return Ok(erro);");
                     stream.WriteLine("\t\t\t\t}"); //Aqui fecha o código do try
                     stream.WriteLine("\t\t\t\tcatch (Exception ex)");
@@ -1069,12 +1096,13 @@ namespace Camada_Info.GeradorInfo
                     //METODO PUT DO CONTROLLER COMEÇA AQUI
                     stream.WriteLine("\n\n\t\t\t // Put: api/" + NomeDaTabela.Substring(3));
                     stream.WriteLine("\t\t\t[HttpPut]");
-                    stream.WriteLine("\t\t\t public IActionResult Put([FromBody]" + NomeDaTabela + "_INFO " + NomeDaTabela.Substring(3).ToLower() + ")");
+                    stream.WriteLine("\t\t\t public IActionResult Put([FromBody]" + NomeDaTabela + " " + NomeDaTabela.Substring(3).ToLower() + ")");
                     stream.WriteLine("\t\t\t{");//Aqui começa co código da função Put
                     stream.WriteLine("\t\t\t\ttry"); //Aqui começa o try
                     stream.WriteLine("\t\t\t\t{");
+                    stream.WriteLine("\t\t\t\t\t string ConnectionString = Conexao.GetConnectionStringSql();");
                     stream.WriteLine("\t\t\t\t\t " + NomeDaTabela.Substring(3).ToLower() + ".Opcao = " + "\"" + "Update" + "\";");
-                    stream.WriteLine("\t\t\t\t\t var response = new " + NomeDaTabela + "_DAL()" + ".Update" + "(" + NomeDaTabela.Substring(3).ToLower() + ");");
+                    stream.WriteLine("\t\t\t\t\t var response = new " + NomeDaTabela + "_DAL()" + ".Update" + "(" + NomeDaTabela.Substring(3).ToLower() + ", ConnectionString);");
                     stream.WriteLine("\t\t\t\t\t return Ok(response);");
                     stream.WriteLine("\t\t\t\t}"); //Aqui fecha o código do try
                     stream.WriteLine("\t\t\t\tcatch (Exception ex)");
@@ -1095,10 +1123,11 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t{");//Aqui começa co código da função Delete
                     stream.WriteLine("\t\t\t\ttry"); //Aqui começa o try
                     stream.WriteLine("\t\t\t\t{");
-                    stream.WriteLine("\t\t\t\t\t" + NomeDaTabela + "_INFO " + NomeDaTabela.Substring(3) + " = new " + NomeDaTabela + "_INFO();");
+                    stream.WriteLine("\t\t\t\t\t string ConnectionString = Conexao.GetConnectionStringSql();");
+                    stream.WriteLine("\t\t\t\t\t" + NomeDaTabela + " " + NomeDaTabela.Substring(3) + " = new " + NomeDaTabela + "();");
                     stream.WriteLine("\t\t\t\t\t" + NomeDaTabela.Substring(3) + ".Opcao = " + "\"" + "Delete" + "\";");
                     stream.WriteLine("\t\t\t\t\t//" + NomeDaTabela.Substring(3) + ".id = id;");
-                    stream.WriteLine("\t\t\t\t\tvar response = new " + NomeDaTabela + "_DAL().Delete" + "(" + NomeDaTabela.Substring(3) + ");");
+                    stream.WriteLine("\t\t\t\t\tvar response = new " + NomeDaTabela + "_DAL().Delete" + "(" + NomeDaTabela.Substring(3) + ", ConnectionString);");
                     stream.WriteLine("\t\t\t\t\treturn Ok(response);");
                     stream.WriteLine("\t\t\t\t}"); //Aqui fecha o código do try
                     stream.WriteLine("\t\t\t\tcatch (Exception ex)");
@@ -1193,13 +1222,13 @@ namespace Camada_Info.GeradorInfo
                     #region "Metodo para fazer POST na tabela"
 
                     //METODO API/POST DA CLASS COMEÇA AQUI
-                    stream.WriteLine("\t\t\t public async Task<string> POST" + NomeDaTabela.Substring(3) + "(" + NomeDaTabela + "_INFO " + NomeDaTabela.Substring(3) + ")");
+                    stream.WriteLine("\t\t\t public async Task<string> POST" + NomeDaTabela.Substring(3) + "(" + NomeDaTabela + " " + NomeDaTabela.Substring(3) + ")");
                     stream.WriteLine("\t\t\t{"); //Aqui fica todo código da função POST
                     stream.WriteLine("\t\t\t\tvar json = JsonConvert.SerializeObject(" + NomeDaTabela.Substring(3) + ");");
                     stream.WriteLine("\t\t\t\tvar content = new StringContent(json, Encoding.UTF8," + "\"" + "application/json" + "\");");
                     stream.WriteLine("\t\t\t\tusing (var client = new HttpClient())");
                     stream.WriteLine("\t\t\t\t{");//Aqui começa o using
-                    stream.WriteLine("\t\t\t\t\tstring URL = string.Concat(ConfigSystem.URLAPI," + "\"" + "/" + NomeDaTabela.Substring(3) + "\");");
+                    stream.WriteLine("\t\t\t\t\tstring URL = string.Concat(ConfigSystem.GetApiUrl()," + "\"" + "/" + NomeDaTabela.Substring(3) + "\");");
                     stream.WriteLine("\t\t\t\t\t//client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(" + "\"" + "Bearer" + "\"" + ",ConfigSystem.Token);");
                     stream.WriteLine("\t\t\t\t\tvar result = await client.PostAsync(URL, content);");
                     stream.WriteLine("\t\t\t\t\tif (result.StatusCode == System.Net.HttpStatusCode.Created)");
@@ -1236,18 +1265,18 @@ namespace Camada_Info.GeradorInfo
                     #region "Método pra fazer GET na tabela, listar todos os dados"
                   
                     //METODO API/GET DA CLASS COMEÇA AQUI
-                    stream.WriteLine("\n\n\t\t\t public async Task<List<" + NomeDaTabela + "_INFO>>" + " GET" + NomeDaTabela.Substring(3) + "()");
+                    stream.WriteLine("\n\n\t\t\t public async Task<List<" + NomeDaTabela + ">>" + " GET" + NomeDaTabela.Substring(3) + "()");
                     stream.WriteLine("\t\t\t{"); //Aqui fica todo código da função GET
-                    stream.WriteLine("\t\t\t\tList<" + NomeDaTabela + "_INFO> " + NomeDaTabela.Substring(3) + " = null;");
+                    stream.WriteLine("\t\t\t\tList<" + NomeDaTabela + "> " + NomeDaTabela.Substring(3) + " = null;");
                     stream.WriteLine("\t\t\t\ttry");
                     stream.WriteLine("\t\t\t\t{"); //Aqui começa o try
                     stream.WriteLine("\t\t\t\t\tvar client = new HttpClient();");
-                    stream.WriteLine("\t\t\t\t\tstring URL = string.Concat(ConfigSystem.URLAPI," + "\"" + "/" + NomeDaTabela.Substring(3) + "\");");
+                    stream.WriteLine("\t\t\t\t\tstring URL = string.Concat(ConfigSystem.GetApiUrl()," + "\"" + "/" + NomeDaTabela.Substring(3) + "\");");
                     stream.WriteLine("\t\t\t\t\t//client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(" + "\"" + "Bearer" + "\"" + ",ConfigSystem.Token);");
                     stream.WriteLine("\t\t\t\t\tvar uri = new Uri(URL);");
                     stream.WriteLine("\t\t\t\t\tHttpResponseMessage response = await client.GetAsync(uri);");
                     stream.WriteLine("\t\t\t\t\tvar responseString = response.Content.ReadAsStringAsync().Result;\n");
-                    stream.WriteLine("\t\t\t\t\tvar json = JsonConvert.DeserializeObject<List<" + NomeDaTabela + "_INFO>>" + "(responseString);");
+                    stream.WriteLine("\t\t\t\t\tvar json = JsonConvert.DeserializeObject<List<" + NomeDaTabela + ">>" + "(responseString);");
                     stream.WriteLine("\t\t\t\t\treturn json;");
                     stream.WriteLine("\t\t\t\t}");//Aqui termina o try
 
@@ -1255,19 +1284,19 @@ namespace Camada_Info.GeradorInfo
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\tstring ERRO = ex.Message;");
                   //  stream.WriteLine("\t\t\t\t\treturn new List<" +  NomeDaTabela + "_INFO>();");
-                    stream.WriteLine("\t\t\t\t\treturn " + NomeDaTabela.Substring(3));
+                    stream.WriteLine("\t\t\t\t\treturn " + NomeDaTabela.Substring(3) + ";");
                     stream.WriteLine("\t\t\t\t}");//Aqui começa termina o cath 1
 
                     stream.WriteLine("\t\t\t\tcatch (HttpRequestException ex)"); //Aqui começa o cath 2
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\tstring ERRO = ex.Message;");
-                    stream.WriteLine("\t\t\t\t\treturn " + NomeDaTabela.Substring(3));
+                    stream.WriteLine("\t\t\t\t\treturn " + NomeDaTabela.Substring(3) + ";");
                     stream.WriteLine("\t\t\t\t}");//Aqui começa termina o cath 2
 
                     stream.WriteLine("\t\t\t\tcatch (Exception ex)"); //Aqui começa o cath 3
                     stream.WriteLine("\t\t\t\t{");
                     stream.WriteLine("\t\t\t\t\tstring ERRO = ex.Message;");
-                    stream.WriteLine("\t\t\t\t\treturn " + NomeDaTabela.Substring(3));
+                    stream.WriteLine("\t\t\t\t\treturn " + NomeDaTabela.Substring(3) + ";");
                     stream.WriteLine("\t\t\t\t}");//Aqui começa termina o cath 3
 
 

@@ -24,3 +24,13 @@ C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Gerador_De
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csproj.CopyComplete
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.exe
 C:\Users\Gerson Mayamba\source\repos\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.pdb
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo_Teste.exe.config
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo_Teste.exe
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo_Teste.pdb
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Camada_Info.dll
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Camada_Info.pdb
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csprojAssemblyReference.cache
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csproj.CoreCompileInputs.cache
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csproj.CopyComplete
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.exe
+C:\Projectos Visual Studio 2019\GeradorDesktop\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.pdb

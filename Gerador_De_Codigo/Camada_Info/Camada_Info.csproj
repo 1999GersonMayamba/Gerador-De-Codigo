@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeradorInfo\Arquivo.cs" />
+    <Compile Include="GeradorInfo\ArquivoCleanAchitecture.cs" />
     <Compile Include="GeradorInfo\ArquivoSqlServer.cs" />
     <Compile Include="GeradorInfo\ConectionLocal.cs" />
     <Compile Include="GeradorInfo\conexao.cs" />

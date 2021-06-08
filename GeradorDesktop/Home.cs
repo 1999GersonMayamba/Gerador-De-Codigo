@@ -82,5 +82,11 @@ namespace GeradorDesktop
             Gerador_Codigo_Sql_Server gerador_Codigo_Sql_Server = new Gerador_Codigo_Sql_Server();
             gerador_Codigo_Sql_Server.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Gerador_Codigo_Clean_Architecture clean_Architecture = new Gerador_Codigo_Clean_Architecture();
+            clean_Architecture.Show();
+        }
     }
 }

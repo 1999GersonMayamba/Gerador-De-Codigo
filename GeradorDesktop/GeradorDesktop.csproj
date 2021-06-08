@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gerador_Codigo_Clean_Architecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerador_Codigo_Clean_Architecture.Designer.cs">
+      <DependentUpon>Gerador_Codigo_Clean_Architecture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerador_Codigo_Mysql.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gerador_Codigo_Clean_Architecture.resx">
+      <DependentUpon>Gerador_Codigo_Clean_Architecture.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gerador_Codigo_Mysql.resx">
       <DependentUpon>Gerador_Codigo_Mysql.cs</DependentUpon>
     </EmbeddedResource>
