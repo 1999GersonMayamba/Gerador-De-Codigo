@@ -52,9 +52,9 @@ namespace Camada_Info.GeradorInfo
                 //Começa a escrever aqui no arquivo Begin
                 using (StreamWriter stream = new StreamWriter(Caminho, true))
                 {
-                    stream.WriteLine("/*Gerado no Gerador de Codigo Do Engº Gerson Z. Maiamba");
+                    stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
                     stream.WriteLine("Data: " + DateTime.Now);
-                    stream.WriteLine("Direitos autorais de Engº Gerson Z. Maiamba*/\n");
+                    stream.WriteLine("*/\n");
                     stream.WriteLine("using System;");
                     stream.WriteLine("using Domain.Entities;");
                     stream.WriteLine("using System.Collections.Generic;");
@@ -128,11 +128,11 @@ namespace Camada_Info.GeradorInfo
                 //Começa a escrever aqui no arquivo Begin
                 using (StreamWriter stream = new StreamWriter(Caminho, true))
                 {
-                    stream.WriteLine("/*Gerado no Gerador de Codigo Do Engº Gerson Z. Maiamba");
+                    stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
                     stream.WriteLine("Data: " + DateTime.Now);
-                    stream.WriteLine("Direitos autorais de Engº Gerson Z. Maiamba*/\n");
+                    stream.WriteLine("*/\n");
                     stream.WriteLine("using System;");
-                    stream.WriteLine("using Application.DTOs." + NomeDaTabela + ";");
+                    stream.WriteLine("using Application.DTOs;");
                     stream.WriteLine("using Application.Wrappers;");
                     stream.WriteLine("using System.Collections.Generic;");
                     stream.WriteLine("using System.Data;");
@@ -180,7 +180,7 @@ namespace Camada_Info.GeradorInfo
             {
                 Mapeamento mapeamento = new Mapeamento();
 
-                string dr = DirectorioAondeSeraGeradoAInfo + @"\DTOs\" + NomeDaTabela;
+                string dr = DirectorioAondeSeraGeradoAInfo + @"\DTOs\";
                 string Caminho = dr + @"\" + NomeDaTabela + "DTO.cs";
 
                 if (Directory.Exists(dr) == false)
@@ -214,14 +214,14 @@ namespace Camada_Info.GeradorInfo
                 using (StreamWriter stream = new StreamWriter(Caminho, true))
                 {
 
-                    stream.WriteLine("/*Gerado no Gerador de Codigo Do Engº Gerson Z. Maiamba");
+                    stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
                     stream.WriteLine("Data: " + DateTime.Now);
-                    stream.WriteLine("Direitos autorais de Engº Gerson Z. Maiamba*/\n");
+                    stream.WriteLine("*/\n");
                     stream.WriteLine("using System;");
                     stream.WriteLine("using System.Collections.Generic;");
                     stream.WriteLine("using System.Text;");
                     stream.WriteLine("using System.Threading.Tasks;\n\n\n");
-                    stream.WriteLine("namespace Application.DTOs." + NomeDaTabela); //+ ".INFO"
+                    stream.WriteLine("namespace Application.DTOs" ); //+ ".INFO"
                     stream.WriteLine("{");
                     stream.WriteLine("\t\tpublic class " + NomeDaTabela + "DTO");
                     stream.WriteLine("\t\t{");
@@ -259,6 +259,10 @@ namespace Camada_Info.GeradorInfo
                         {
                             x.Tipo = "DateTime";
                             stream.WriteLine("\t\t\tpublic Guid" + " " + x.Nome + " { get; set; }");
+                        }
+                        else if (x.Tipo.Contains("bit"))
+                        {
+                            stream.WriteLine("\t\t\tpublic bool" + " " + x.Nome + " { get; set; }");
                         }
                         else
                         {
@@ -330,11 +334,11 @@ namespace Camada_Info.GeradorInfo
 
 
 
-                    stream.WriteLine("/*Gerado no Gerador de Codigo Do Engº Gerson Z. Maiamba");
+                    stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
                     stream.WriteLine("Data: " + DateTime.Now);
-                    stream.WriteLine("Direitos autorais de Engº Gerson Z. Maiamba*/\n");
+                    stream.WriteLine("*/\n");
                     //Cabeçalho das biblotecas inicio namespaces
-                    stream.WriteLine("using Application.DTOs." + NomeDaTabela + ";");
+                    stream.WriteLine("using Application.DTOs;");
                     stream.WriteLine("using Application.Exceptions;");
                     stream.WriteLine("using Application.Interfaces;");
                     stream.WriteLine("using Application.Interfaces.NLog;");
@@ -555,9 +559,9 @@ namespace Camada_Info.GeradorInfo
                 {
 
 
-                    stream.WriteLine("/*Gerado no Gerador de Codigo Do Engº Gerson Z. Maiamba");
+                    stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
                     stream.WriteLine("Data: " + DateTime.Now);
-                    stream.WriteLine("Direitos autorais de Engº Gerson Z. Maiamba*/\n");
+                    stream.WriteLine("*/\n");
                     //Cabeçalho das biblotecas inicio namespaces
                     stream.WriteLine("using Application.Interfaces.Repositories;");
                     stream.WriteLine("using Domain.Entities;");
@@ -656,22 +660,24 @@ namespace Camada_Info.GeradorInfo
                 //Começa a escrever aqui no arquivo Begin
                 using (StreamWriter stream = new StreamWriter(Caminho, true))
                 {
-                    stream.WriteLine("/*Gerado no Gerador de Codigo Do Engº Gerson Z. Maiamba");
+                    stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
                     stream.WriteLine("Data: " + DateTime.Now);
-                    stream.WriteLine("Direitos autorais de Engº Gerson Z. Maiamba*/\n");
+                    stream.WriteLine("*/\n");
                     //Cabeçalho das biblotecas inicio namespaces
-                    stream.WriteLine("using Application.DTOs." + NomeDaTabela + ";");
+                    stream.WriteLine("using Application.DTOs;");
                     stream.WriteLine("using Application.Interfaces.Services;");
                     stream.WriteLine("using Microsoft.AspNetCore.Http;");
                     stream.WriteLine("using Microsoft.AspNetCore.Mvc;");
                     stream.WriteLine("using System;");
                     stream.WriteLine("using System.Collections.Generic;");
                     stream.WriteLine("using System.Linq;");
-                    stream.WriteLine("using System.Threading.Tasks;");
+                    stream.WriteLine("using System.Threading.Tasks;\n\n");
                     //Cabeçalho das biblotecas fim namespaces
 
-                    stream.WriteLine("namespace WebApi.Controllers"); // Escreve o namespace do projecto no arquivo
+                    stream.WriteLine("namespace WebApi.Controllers\n\n"); // Escreve o namespace do projecto no arquivo
                     stream.WriteLine("{");// adiciona a primeira chaveta após o namespcae
+                    stream.WriteLine("\t\t[Route(" + "\"" + "api/[controller]" + "\"" + ")]");
+                    stream.WriteLine("\t\t[ApiController]");
                     stream.WriteLine("\t\tpublic class " + NomeDaTabela + "Controller : BaseApiController"); // Adiciona o nome da classe e os seus atributos
                     stream.WriteLine("\t\t{"); //Abre chaves para escrever todo o codigo que deve existir na classe
 
@@ -764,6 +770,438 @@ namespace Camada_Info.GeradorInfo
             }
         }
         #endregion
-       
+
+
+        #region Gerar ServiceRegistrationApplication
+        public string GerarServiceRegistrationApplication(string NomeDaTabela, string NameSpaceDoProjecto, string DirectorioAondeSeraGeradoAInfo, string NameSpaceDAL_INFO)
+        {
+
+            try
+            {
+                Mapeamento mapeamento = new Mapeamento();
+
+                string dr = DirectorioAondeSeraGeradoAInfo + @"\ServiceRegistrationApplication";
+                string Caminho = dr + @"\"  + "ServiceRegistration.cs";
+
+                if (Directory.Exists(dr) == false)
+                {
+                    Directory.CreateDirectory(dr); //CRIAR O DIRETORIO SE NÃO EXISTIR
+
+                    if (File.Exists(Caminho) == true)
+                    {
+                        //File.CreateText(Caminho);
+                        ServiceRegistrationEditFile(Caminho, NomeDaTabela);
+                    }
+                    else
+                    {
+                        FileStream file = File.Create(Caminho);
+                        file.Close();
+                        ServiceRegistrationNewFile(Caminho, NomeDaTabela);
+                    }
+                }
+                else
+                {
+                    if (File.Exists(Caminho) == true)
+                    {
+                        //File.CreateText(Caminho);
+                        ServiceRegistrationEditFile(Caminho, NomeDaTabela);
+                    }
+                    else
+                    {
+                        FileStream file = File.Create(Caminho);
+                        file.Close();
+                        ServiceRegistrationNewFile(Caminho, NomeDaTabela);
+                    }
+                }
+
+
+
+                return "Controller da API Gerado com sucesso";
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+
+        /// <summary>
+        /// Método para escrever num ficheiro novo
+        /// </summary>
+        /// <param name="caminho"></param>
+        /// <param name="NomeDaTabela"></param>
+        private void ServiceRegistrationNewFile(string caminho, string NomeDaTabela)
+        {
+            //Começa a escrever aqui no arquivo Begin
+            using (StreamWriter stream = new StreamWriter(caminho, true))
+            {
+
+
+                stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
+                stream.WriteLine("Data: " + DateTime.Now);
+                stream.WriteLine("*/\n");
+                //Cabeçalho das biblotecas inicio namespaces
+                stream.WriteLine("using Application.Behaviours;");
+                stream.WriteLine("using Application.Features.services;");
+                stream.WriteLine("using Application.Interfaces.Services;");
+                stream.WriteLine("using AutoMapper;");
+                stream.WriteLine("using FluentValidation;");
+                stream.WriteLine("using MediatR;");
+                stream.WriteLine("using Microsoft.Extensions.DependencyInjection;");
+                stream.WriteLine("using System.Reflection;");
+                stream.WriteLine("using MediatR;");
+                stream.WriteLine("using System;");
+                stream.WriteLine("using System.Collections.Generic;");
+                stream.WriteLine("using System.Linq;");
+                stream.WriteLine("using System.Text;\n\n");
+                //Cabeçalho das biblotecas fim namespaces
+
+                stream.WriteLine("namespace Application\n\n"); // Escreve o namespace do projecto no arquivo
+                stream.WriteLine("{");// adiciona a primeira chaveta após o namespcae
+                stream.WriteLine("\t\tpublic static class ServiceExtensions"); // Adiciona o nome da classe e os seus atributos
+                stream.WriteLine("\t\t{"); //Abre chaves para escrever todo o codigo que deve existir na classe
+
+
+
+
+                #region CONSTRUTOR DA CLASSE
+
+                //GERAR O CONSTRUTOR 
+                stream.WriteLine("\t\t\t\tpublic static void AddApplicationLayer(this IServiceCollection services)"); //Declara o metodo que restorna a lista de dados
+                stream.WriteLine("\t\t\t\t{");
+
+                stream.WriteLine("\t\t\t\t\tservices.AddAutoMapper(Assembly.GetExecutingAssembly());");
+                stream.WriteLine("\t\t\t\t\tservices.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());");
+                stream.WriteLine("\t\t\t\t\tservices.AddMediatR(Assembly.GetExecutingAssembly());");
+                stream.WriteLine("\t\t\t\t\tservices.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));");
+
+
+                stream.WriteLine("\t\t\t\t\tservices.AddTransient<I" + NomeDaTabela + "Service," + NomeDaTabela + "Service>();");
+                stream.WriteLine("\t\t\t\t}\n\n");
+
+
+                #endregion
+
+
+                stream.WriteLine("\t\t}");//Aqui fecha o código da classe
+                stream.WriteLine("}"); //Aqui fecha o código no namespace
+                stream.Close();
+                //Aqui termina o código do controller
+
+            }
+
+        }
+
+        /// <summary>
+        /// Método para editar o ficheciro já existente
+        /// </summary>
+        /// <param name="caminho"></param>
+        /// <param name="NomeDaTabela"></param>
+        private void ServiceRegistrationEditFile(string caminho, string NomeDaTabela)
+        {
+            //Começa a escrever aqui no arquivo Begin
+            using (StreamWriter stream = new StreamWriter(caminho, true))
+            {
+
+                #region REGISTAR A DEPENDECIA
+
+                stream.WriteLine("\t\t\t\t\tservices.AddTransient<I" + NomeDaTabela + "Service," + NomeDaTabela + "Service>();");
+                
+                #endregion
+                stream.Close();
+                
+
+            }
+        }
+        #endregion
+
+        #region Gerar ServiceRegistrationPersistence
+        public string GerarServiceRegistrationPersistence(string NomeDaTabela, string NameSpaceDoProjecto, string DirectorioAondeSeraGeradoAInfo, string NameSpaceDAL_INFO)
+        {
+
+            try
+            {
+                Mapeamento mapeamento = new Mapeamento();
+
+                string dr = DirectorioAondeSeraGeradoAInfo + @"\ServiceRegistrationPersistence";
+                string Caminho = dr + @"\" + "ServiceRegistration.cs";
+
+                if (Directory.Exists(dr) == false)
+                {
+                    Directory.CreateDirectory(dr); //CRIAR O DIRETORIO SE NÃO EXISTIR
+
+                    if (File.Exists(Caminho) == true)
+                    {
+                        //File.CreateText(Caminho);
+                        ServiceRegistrationEditFile(Caminho, NomeDaTabela);
+                    }
+                    else
+                    {
+                        FileStream file = File.Create(Caminho);
+                        file.Close();
+                        ServiceRegistrationPersistenceNewFile(Caminho, NomeDaTabela);
+                    }
+                }
+                else
+                {
+                    if (File.Exists(Caminho) == true)
+                    {
+                        //File.CreateText(Caminho);
+                        ServiceRegistrationPersistenceEditFile(Caminho, NomeDaTabela);
+                    }
+                    else
+                    {
+                        FileStream file = File.Create(Caminho);
+                        file.Close();
+                        ServiceRegistrationPersistenceNewFile(Caminho, NomeDaTabela);
+                    }
+                }
+
+
+
+                return "Controller da API Gerado com sucesso";
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="caminho"></param>
+        /// <param name="nomeDaTabela"></param>
+        private void ServiceRegistrationPersistenceEditFile(string caminho, string nomeDaTabela)
+        {
+            //Começa a escrever aqui no arquivo Begin
+            using (StreamWriter stream = new StreamWriter(caminho, true))
+            {
+
+                #region REGISTAR A DEPENDECIA
+
+                stream.WriteLine("\t\t\t\t\tservices.AddTransient<I" + nomeDaTabela + "Repository, " + nomeDaTabela + "Repository>();\n");
+
+                #endregion
+                stream.Close();
+
+
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="caminho"></param>
+        /// <param name="nomeDaTabela"></param>
+        private void ServiceRegistrationPersistenceNewFile(string caminho, string nomeDaTabela)
+        {
+            //Começa a escrever aqui no arquivo Begin
+            using (StreamWriter stream = new StreamWriter(caminho, true))
+            {
+
+
+
+                stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
+                stream.WriteLine("Data: " + DateTime.Now);
+                stream.WriteLine("*/\n");
+
+
+                //Cabeçalho das biblotecas inicio namespaces
+                stream.WriteLine("using Application.Interfaces;");
+                stream.WriteLine("using Application.Interfaces.Repositories;");
+                stream.WriteLine("using Infrastructure.Persistence.Contexts;");
+                stream.WriteLine("using Infrastructure.Persistence.Repositories;");
+                stream.WriteLine("using Infrastructure.Persistence.Repository;");
+                stream.WriteLine("using Microsoft.EntityFrameworkCore;");
+                stream.WriteLine("using Microsoft.Extensions.Configuration;");
+                stream.WriteLine("using Microsoft.Extensions.DependencyInjection;");
+                stream.WriteLine("using System;");
+                stream.WriteLine("using System.Collections.Generic;");
+                stream.WriteLine("using System.Text;\n\n");
+                //Cabeçalho das biblotecas fim namespaces
+
+                stream.WriteLine("namespace Infrastructure.Persistence\n\n"); // Escreve o namespace do projecto no arquivo
+                stream.WriteLine("{");// adiciona a primeira chaveta após o namespcae
+                stream.WriteLine("\t\tpublic static class ServiceExtensions"); // Adiciona o nome da classe e os seus atributos
+                stream.WriteLine("\t\t{"); //Abre chaves para escrever todo o codigo que deve existir na classe
+
+
+
+
+                #region METODO AddPersistenceInfrastructure
+
+                //GERAR O CONSTRUTOR 
+                stream.WriteLine("\t\t\t\tpublic static void AddPersistenceInfrastructure(this IServiceCollection services, IConfiguration configuration)"); //Declara o metodo que restorna a lista de dados
+                stream.WriteLine("\t\t\t\t{");
+
+
+                stream.WriteLine("\t\t\t\t\tif (configuration.GetValue<bool>(" + "\"" + "UseInMemoryDatabase" + "\"" +"))");
+                stream.WriteLine("\t\t\t\t\t{");
+                stream.WriteLine("\t\t\t\t\t\tservices.AddDbContext<ApplicationDbContext>(options =>");
+                stream.WriteLine("\t\t\t\t\t\t\toptions.UseInMemoryDatabase(" + "\"" + "CleanArq" + "\"" +"));");
+                stream.WriteLine("\t\t\t\t\t}");
+
+                stream.WriteLine("\t\t\t\t\telse");
+                stream.WriteLine("\t\t\t\t\t{");
+                stream.WriteLine("\t\t\t\t\t\tservices.AddDbContext<ApplicationDbContext>(options =>");
+                stream.WriteLine("\t\t\t\t\t\toptions.UseSqlServer(");
+                stream.WriteLine("\t\t\t\t\t\tconfiguration.GetConnectionString(" + "\"" + "DefaultConnection" + "\"" + "),");
+                stream.WriteLine("\t\t\t\t\t\tb => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));");
+                stream.WriteLine("\t\t\t\t\t}\n");
+
+
+
+
+                stream.WriteLine("\t\t\t\t\t#region Repositories\n");
+                stream.WriteLine("\t\t\t\t\tservices.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));");
+                stream.WriteLine("\t\t\t\t\tservices.AddTransient<I" + nomeDaTabela + "Repository, " + nomeDaTabela + "Repository>();\n");
+
+                stream.WriteLine("\t\t\t\t\t#endregion\n");
+                stream.WriteLine("\t\t\t\t}\n\n");
+
+
+                #endregion
+
+
+                stream.WriteLine("\t\t}");//Aqui fecha o código da classe
+                stream.WriteLine("}"); //Aqui fecha o código no namespace
+                stream.Close();
+                //Aqui termina o código do controller
+
+            }
+        }
+
+
+        #endregion
+
+
+        #region Gerar Mappings
+        public string GerarGeneralProfile(string NomeDaTabela, string NameSpaceDoProjecto, string DirectorioAondeSeraGeradoAInfo, string NameSpaceDAL_INFO)
+        {
+
+            try
+            {
+                Mapeamento mapeamento = new Mapeamento();
+
+                string dr = DirectorioAondeSeraGeradoAInfo + @"\Mappings";
+                string Caminho = dr + @"\" + "GeneralProfile.cs";
+
+                if (Directory.Exists(dr) == false)
+                {
+                    Directory.CreateDirectory(dr); //CRIAR O DIRETORIO SE NÃO EXISTIR
+
+                    if (File.Exists(Caminho) == true)
+                    {
+                        //File.CreateText(Caminho);
+                        ServiceRegistrationEditFile(Caminho, NomeDaTabela);
+                    }
+                    else
+                    {
+                        FileStream file = File.Create(Caminho);
+                        file.Close();
+                        ServiceGeneralProfileNewFile(Caminho, NomeDaTabela);
+                    }
+                }
+                else
+                {
+                    if (File.Exists(Caminho) == true)
+                    {
+                        //File.CreateText(Caminho);
+                        ServiceGeneralProfileEditFile(Caminho, NomeDaTabela);
+                    }
+                    else
+                    {
+                        FileStream file = File.Create(Caminho);
+                        file.Close();
+                        ServiceGeneralProfileNewFile(Caminho, NomeDaTabela);
+                    }
+                }
+
+
+
+                return "Mappings Gerado com sucesso";
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        private void ServiceGeneralProfileEditFile(string caminho, string nomeDaTabela)
+        {
+            //Começa a escrever aqui no arquivo Begin
+            using (StreamWriter stream = new StreamWriter(caminho, true))
+            {
+
+                #region REGISTAR A DEPENDECIA
+
+                stream.WriteLine("\t\t\t\t\t\tCreateMap<" + nomeDaTabela + "DTO, " + nomeDaTabela + ">().ReverseMap();");
+
+                #endregion
+                stream.Close();
+
+
+            }
+        }
+
+        private void ServiceGeneralProfileNewFile(string caminho, string nomeDaTabela)
+        {
+            //Começa a escrever aqui no arquivo Begin
+            using (StreamWriter stream = new StreamWriter(caminho, true))
+            {
+
+
+                stream.WriteLine("/*Gerado no Gerador de Codigo UCALL");
+                stream.WriteLine("Data: " + DateTime.Now);
+                stream.WriteLine("*/\n");
+
+
+                //Cabeçalho das biblotecas inicio namespaces
+                stream.WriteLine("using Application.DTOs;");
+                stream.WriteLine("using AutoMapper;");
+                stream.WriteLine("using Domain.Entities;");
+                stream.WriteLine("using System;");
+                stream.WriteLine("using System.Collections.Generic;");
+                stream.WriteLine("using System.Text;\n\n");
+                //Cabeçalho das biblotecas fim namespaces
+
+                stream.WriteLine("namespace Application.Mappings\n\n"); // Escreve o namespace do projecto no arquivo
+                stream.WriteLine("{");// adiciona a primeira chaveta após o namespcae
+                stream.WriteLine("\t\tpublic class GeneralProfile : Profile"); // Adiciona o nome da classe e os seus atributos
+                stream.WriteLine("\t\t{"); //Abre chaves para escrever todo o codigo que deve existir na classe
+
+
+
+
+                #region METODO GeneralProfile
+
+                //GERAR O CONSTRUTOR 
+                stream.WriteLine("\t\t\t\tpublic GeneralProfile()"); //Declara o metodo que restorna a lista de dados
+                stream.WriteLine("\t\t\t\t{");
+
+                stream.WriteLine("\t\t\t\t\t\tCreateMap<" + nomeDaTabela + "DTO, " +  nomeDaTabela + ">().ReverseMap();");
+
+
+                stream.WriteLine("\t\t\t\t}\n\n");
+
+
+                #endregion
+
+
+                stream.WriteLine("\t\t}");//Aqui fecha o código da classe
+                stream.WriteLine("}"); //Aqui fecha o código no namespace
+                stream.Close();
+                //Aqui termina o código do controller
+
+            }
+        }
+
+
+        #endregion
     }
 }
