@@ -50,6 +50,16 @@ namespace GeradorDesktop
                     string retorno = CleanAchitecture.GerarInterfaceRepository(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
                     //Gerar as interfaces Service
                     string retorno1 = CleanAchitecture.GerarInterfaceService(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                    //Gerar as DTOs
+                    string retorno2 = CleanAchitecture.GerarDTO(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                    //Gerar as Service
+                    string retorno3 = CleanAchitecture.GerarService(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+                    //Gerar as Service
+                    string retorno4 = CleanAchitecture.GerarRepositories(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath);
+
+                    //Gerar controller
+                    string retorno5 = CleanAchitecture.GerarControllerAPI(ItemSelecionado.TABLE_NAME, Lb_NameSpace.Text, folderBrowserDialog1.SelectedPath, null);
+
 
                     MessageBox.Show("Todos Item Foram Gerados Com Sucesso INFO, DAL, API, SCRIP SQL e Classe De Consumo da API no C#");
                 }

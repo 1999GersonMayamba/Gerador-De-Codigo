@@ -307,7 +307,7 @@ namespace GeradorDesktop
             this.textBox_Servidor.Name = "textBox_Servidor";
             this.textBox_Servidor.Size = new System.Drawing.Size(288, 23);
             this.textBox_Servidor.TabIndex = 3;
-            this.textBox_Servidor.Text = "localhost";
+            this.textBox_Servidor.Text = "10.11.1.68";
             // 
             // label2
             // 
@@ -346,7 +346,7 @@ namespace GeradorDesktop
             this.textBox_Senha.PasswordChar = '*';
             this.textBox_Senha.Size = new System.Drawing.Size(668, 23);
             this.textBox_Senha.TabIndex = 11;
-            this.textBox_Senha.Text = "123";
+            this.textBox_Senha.Text = "teste";
             // 
             // btn_Carregar_Tabelas_SqlServer
             // 
@@ -376,7 +376,7 @@ namespace GeradorDesktop
             this.textBox_BD.Name = "textBox_BD";
             this.textBox_BD.Size = new System.Drawing.Size(305, 23);
             this.textBox_BD.TabIndex = 9;
-            this.textBox_BD.Text = "SMS_ANGO";
+            this.textBox_BD.Text = "UtoolHelpDeskDB";
             // 
             // label5
             // 
@@ -395,7 +395,7 @@ namespace GeradorDesktop
             this.textBox_User.Name = "textBox_User";
             this.textBox_User.Size = new System.Drawing.Size(288, 23);
             this.textBox_User.TabIndex = 7;
-            this.textBox_User.Text = "sa";
+            this.textBox_User.Text = "teste";
             // 
             // label4
             // 
@@ -431,7 +431,7 @@ namespace GeradorDesktop
             // 
             // folderBrowserDialog1
             // 
-            this.folderBrowserDialog1.SelectedPath = "C:\\Users\\Gerson Mayamba\\Pictures\\Teste #Gerador De Codigo";
+            this.folderBrowserDialog1.SelectedPath = "C:\\Users\\gmayamba\\Documents\\GeradorDeCodigo#Teste";
             // 
             // Gerador_Codigo_Clean_Architecture
             // 
