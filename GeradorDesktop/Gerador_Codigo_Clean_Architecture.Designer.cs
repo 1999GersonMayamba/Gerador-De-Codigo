@@ -32,12 +32,20 @@ namespace GeradorDesktop
             this.btn_Gerar_Tudo = new System.Windows.Forms.Button();
             this.button_Gerar_Codigo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.Lb_NameSpace_DAL = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBox_NameSpaceConsumirAPI = new System.Windows.Forms.TextBox();
+            this.btn_Diretorio = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox_NameSpace_API_Project = new System.Windows.Forms.TextBox();
-            this.btn_Diretorio = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Lb_NameSpace = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,23 +65,15 @@ namespace GeradorDesktop
             this.listBox_Tabelas = new System.Windows.Forms.ListBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox_MAPPINGS = new System.Windows.Forms.CheckBox();
+            this.checkBox_SERVICE = new System.Windows.Forms.CheckBox();
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE = new System.Windows.Forms.CheckBox();
             this.checkBox_SERVICEREGISTRATIONAPPLICATION = new System.Windows.Forms.CheckBox();
             this.checkBox_ISERVICES = new System.Windows.Forms.CheckBox();
             this.checkBox_IREPOSITORIES = new System.Windows.Forms.CheckBox();
             this.checkBox_DTOs = new System.Windows.Forms.CheckBox();
             this.checkBox_REPOSITORIES = new System.Windows.Forms.CheckBox();
             this.checkBox_CONTROLLER = new System.Windows.Forms.CheckBox();
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox_SERVICE = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.checkBox_MAPPINGS = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -131,6 +131,53 @@ namespace GeradorDesktop
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Namespace Projectos";
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(21, 328);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(491, 23);
+            this.textBox4.TabIndex = 28;
+            this.textBox4.Text = "Application.Mappings";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 307);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 17);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "MAPPINGS";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(21, 277);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(491, 23);
+            this.textBox3.TabIndex = 26;
+            this.textBox3.Text = "Application.Features.services";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(19, 250);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 17);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "SERVICES";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(22, 435);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(491, 23);
+            this.textBox2.TabIndex = 24;
+            this.textBox2.Text = "Infrastructure.Persistence";
+            // 
             // Lb_NameSpace_DAL
             // 
             this.Lb_NameSpace_DAL.Location = new System.Drawing.Point(21, 110);
@@ -150,6 +197,16 @@ namespace GeradorDesktop
             this.label10.TabIndex = 20;
             this.label10.Text = "CONTROLLER";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(20, 414);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(264, 17);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "SERVICEREGISTRATIONPERSISTANCE";
+            // 
             // textBox_NameSpaceConsumirAPI
             // 
             this.textBox_NameSpaceConsumirAPI.Location = new System.Drawing.Point(21, 216);
@@ -158,6 +215,27 @@ namespace GeradorDesktop
             this.textBox_NameSpaceConsumirAPI.Size = new System.Drawing.Size(491, 23);
             this.textBox_NameSpaceConsumirAPI.TabIndex = 19;
             this.textBox_NameSpaceConsumirAPI.Text = "Application.Interfaces.Services";
+            // 
+            // btn_Diretorio
+            // 
+            this.btn_Diretorio.Location = new System.Drawing.Point(292, 469);
+            this.btn_Diretorio.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Diretorio.Name = "btn_Diretorio";
+            this.btn_Diretorio.Size = new System.Drawing.Size(221, 37);
+            this.btn_Diretorio.TabIndex = 13;
+            this.btn_Diretorio.Text = "Escolher Diretorio";
+            this.btn_Diretorio.UseVisualStyleBackColor = true;
+            this.btn_Diretorio.Click += new System.EventHandler(this.btn_Diretorio_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(19, 357);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(258, 17);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "SERVICEREGISTRATIONAPPLICATION";
             // 
             // label9
             // 
@@ -178,16 +256,14 @@ namespace GeradorDesktop
             this.textBox_NameSpace_API_Project.TabIndex = 17;
             this.textBox_NameSpace_API_Project.Text = "Application.Interfaces.Repositories";
             // 
-            // btn_Diretorio
+            // textBox1
             // 
-            this.btn_Diretorio.Location = new System.Drawing.Point(292, 469);
-            this.btn_Diretorio.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Diretorio.Name = "btn_Diretorio";
-            this.btn_Diretorio.Size = new System.Drawing.Size(221, 37);
-            this.btn_Diretorio.TabIndex = 13;
-            this.btn_Diretorio.Text = "Escolher Diretorio";
-            this.btn_Diretorio.UseVisualStyleBackColor = true;
-            this.btn_Diretorio.Click += new System.EventHandler(this.btn_Diretorio_Click);
+            this.textBox1.Location = new System.Drawing.Point(21, 378);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(491, 23);
+            this.textBox1.TabIndex = 22;
+            this.textBox1.Text = "Application";
             // 
             // label8
             // 
@@ -371,7 +447,7 @@ namespace GeradorDesktop
             // 
             // folderBrowserDialog1
             // 
-            this.folderBrowserDialog1.SelectedPath = "C:\\Users\\gmayamba\\Documents\\GeradorDeCodigo#Teste";
+            this.folderBrowserDialog1.SelectedPath = "C:\\Users\\gmayamba\\Documents\\Gerador#Codigo";
             // 
             // groupBox4
             // 
@@ -390,6 +466,42 @@ namespace GeradorDesktop
             this.groupBox4.TabIndex = 36;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Gerar";
+            // 
+            // checkBox_MAPPINGS
+            // 
+            this.checkBox_MAPPINGS.AutoSize = true;
+            this.checkBox_MAPPINGS.Checked = true;
+            this.checkBox_MAPPINGS.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_MAPPINGS.Location = new System.Drawing.Point(6, 250);
+            this.checkBox_MAPPINGS.Name = "checkBox_MAPPINGS";
+            this.checkBox_MAPPINGS.Size = new System.Drawing.Size(98, 21);
+            this.checkBox_MAPPINGS.TabIndex = 27;
+            this.checkBox_MAPPINGS.Text = "MAPPINGS";
+            this.checkBox_MAPPINGS.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_SERVICE
+            // 
+            this.checkBox_SERVICE.AutoSize = true;
+            this.checkBox_SERVICE.Checked = true;
+            this.checkBox_SERVICE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_SERVICE.Location = new System.Drawing.Point(6, 225);
+            this.checkBox_SERVICE.Name = "checkBox_SERVICE";
+            this.checkBox_SERVICE.Size = new System.Drawing.Size(85, 21);
+            this.checkBox_SERVICE.TabIndex = 26;
+            this.checkBox_SERVICE.Text = "SERVICE";
+            this.checkBox_SERVICE.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_SERVICEREGISTRATIONPERSISTANCE
+            // 
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.AutoSize = true;
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Checked = true;
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Location = new System.Drawing.Point(6, 304);
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Name = "checkBox_SERVICEREGISTRATIONPERSISTANCE";
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Size = new System.Drawing.Size(283, 21);
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.TabIndex = 25;
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Text = "SERVICEREGISTRATIONPERSISTANCE";
+            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.UseVisualStyleBackColor = true;
             // 
             // checkBox_SERVICEREGISTRATIONAPPLICATION
             // 
@@ -463,123 +575,12 @@ namespace GeradorDesktop
             this.checkBox_CONTROLLER.Text = "CONTROLLER";
             this.checkBox_CONTROLLER.UseVisualStyleBackColor = true;
             // 
-            // checkBox_SERVICEREGISTRATIONPERSISTANCE
-            // 
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.AutoSize = true;
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Checked = true;
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Location = new System.Drawing.Point(6, 304);
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Name = "checkBox_SERVICEREGISTRATIONPERSISTANCE";
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Size = new System.Drawing.Size(283, 21);
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.TabIndex = 25;
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.Text = "SERVICEREGISTRATIONPERSISTANCE";
-            this.checkBox_SERVICEREGISTRATIONPERSISTANCE.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 357);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(258, 17);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "SERVICEREGISTRATIONAPPLICATION";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 414);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(264, 17);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "SERVICEREGISTRATIONPERSISTANCE";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(21, 378);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(491, 23);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.Text = "Application";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(22, 435);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(491, 23);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Text = "Infrastructure.Persistence";
-            // 
-            // checkBox_SERVICE
-            // 
-            this.checkBox_SERVICE.AutoSize = true;
-            this.checkBox_SERVICE.Checked = true;
-            this.checkBox_SERVICE.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_SERVICE.Location = new System.Drawing.Point(6, 225);
-            this.checkBox_SERVICE.Name = "checkBox_SERVICE";
-            this.checkBox_SERVICE.Size = new System.Drawing.Size(85, 21);
-            this.checkBox_SERVICE.TabIndex = 26;
-            this.checkBox_SERVICE.Text = "SERVICE";
-            this.checkBox_SERVICE.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(21, 277);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(491, 23);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "Application.Features.services";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(19, 250);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 17);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "SERVICES";
-            // 
-            // checkBox_MAPPINGS
-            // 
-            this.checkBox_MAPPINGS.AutoSize = true;
-            this.checkBox_MAPPINGS.Checked = true;
-            this.checkBox_MAPPINGS.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_MAPPINGS.Location = new System.Drawing.Point(6, 250);
-            this.checkBox_MAPPINGS.Name = "checkBox_MAPPINGS";
-            this.checkBox_MAPPINGS.Size = new System.Drawing.Size(98, 21);
-            this.checkBox_MAPPINGS.TabIndex = 27;
-            this.checkBox_MAPPINGS.Text = "MAPPINGS";
-            this.checkBox_MAPPINGS.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(21, 328);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(491, 23);
-            this.textBox4.TabIndex = 28;
-            this.textBox4.Text = "Application.Mappings";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 307);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 17);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "MAPPINGS";
-            // 
             // Gerador_Codigo_Clean_Architecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 807);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1317, 749);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btn_Gerar_Tudo);
             this.Controls.Add(this.button_Gerar_Codigo);

@@ -44,3 +44,13 @@ C:\Projectos Visual Studio\Gerador-De-Codigo\Gerador_De_Codigo\Gerador_De_Codigo
 C:\Projectos Visual Studio\Gerador-De-Codigo\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csproj.CopyComplete
 C:\Projectos Visual Studio\Gerador-De-Codigo\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.exe
 C:\Projectos Visual Studio\Gerador-De-Codigo\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.pdb
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo_Teste.exe.config
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo_Teste.exe
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Gerador_De_Codigo_Teste.pdb
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Camada_Info.dll
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\bin\Debug\Camada_Info.pdb
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csproj.AssemblyReference.cache
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csproj.CoreCompileInputs.cache
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.csproj.CopyComplete
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.exe
+C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\Gerador_De_Codigo\Gerador_De_Codigo\obj\Debug\Gerador_De_Codigo_Teste.pdb
