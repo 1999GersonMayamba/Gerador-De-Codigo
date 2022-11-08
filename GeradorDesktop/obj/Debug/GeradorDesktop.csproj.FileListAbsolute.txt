@@ -68,3 +68,4 @@ C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\GeradorDesktop\obj\
 C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\GeradorDesktop\obj\Debug\GeradorDesktop.csproj.CopyComplete
 C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\GeradorDesktop\obj\Debug\GeradorDesktop.exe
 C:\Projectos Visual Studio\Gerador-CleanArchitecture-NetCore\GeradorDesktop\obj\Debug\GeradorDesktop.pdb
+C:\Projectos Visual Studio\Gerador-De-Codigo\GeradorDesktop\obj\Debug\GeradorDesktop.csproj.SuggestedBindingRedirects.cache
